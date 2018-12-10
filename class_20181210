@@ -1,0 +1,13 @@
+<h1>Class 2018.12.10</h1>
+
+<h2>HTMLとは</h2>
+  - Hyper Text Markup Language
+  
+  文書型宣言
+  <!DOCTYPE html>　→　html5はこの宣言
+  文章型宣言の変遷
+  HTMLから始まり　→　検索に引っ掛かりやすいようにXHTMLが一時主流に　→　アクセスデバイスが多様化し、書式が厳格なXHTMLでは無理が出てきた
+  対応をさせるためにHTML　が主流に戻った。
+  
+  HTMLタグは小文字で入力
+  

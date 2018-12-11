@@ -8,4 +8,5 @@
 2018年12月3日より、Webデザインとプログラミングの勉強のため職業訓練校に入校しました。<br>
 習ったことを駆使して、授業のまとめを記載していきます。<br>
 どんどんページの内容が充実していくことを祈って、、、<br>
-<a href="http://www.lamplus.ml/lesson_20181210.html">2018年12月10日<a>
+<a href="/job training school/lesson_20181210.html">2018年12月10日<a>
+<a href="/job training school/lesson_20181211.html">2018年12月11日<a>

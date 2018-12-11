@@ -4,9 +4,10 @@
 日々の勉強内容、調べたことなどを記載していきます。
 
 
-
+<p>
 2018年12月3日より、Webデザインとプログラミングの勉強のため職業訓練校に入校しました。<br>
 習ったことを駆使して、授業のまとめを記載していきます。<br>
 どんどんページの内容が充実していくことを祈って、、、<br>
-<a href="/job training school/lesson_20181210.html">2018年12月10日<a>
+</p>
+<a href="/job training school/lesson_20181210.html">2018年12月10日<a><br>
 <a href="/job training school/lesson_20181211.html">2018年12月11日<a>

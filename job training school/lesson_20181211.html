@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>職業訓練校 | 2018.12.11 授業内容</title>
+  </head>
+  <body>
+    <h1 id="top">2018.12.11 授業内容</h1>
+    <h2>本日の有難いお言葉</h2>
+<p>
+訓練中は何度もトライして何度失敗しても問題ない期間。どんどんトライしてください。
+</p>
+
+
+<h3>リスト</h3>
+
+<ul>
+<li>二つのタグを使用
+<li>ulタグのすぐ下にはliタグを置くこと。セットで使用。</li>
+<li>ulが親、liが子、親子要素と呼ばれる。例）ulの子供要素はli </li>
+<li>楽天やゾゾタウンの左のカテゴリ、パンくずリストなどに使われている。リストはよく使う。</li>
+</ul>
+
+<h3>番号なしリストの定義</h3>
+<p>
+ul要素 unordered list：番号なしリスト<br>
+li要素 list item：リスト項目<br>
+<br>
+・左に余白ができる<br>
+・項目先頭にマーカー「・」が表示される<br>
+<br>
+&lt;ul&gt; → ul要素が枠を担当<br>
+ &lt;li&gt;Windows&&lt;/li&gt; → li要素が項目を担当<br>
+ &lt;li&gt;Macintosh&lt;/li&gt; → li要素が項目を担当<br>
+ &lt;li&gt;Linux&lt;/li&gt; → li要素が項目を担当<br>
+&lt;/ul&gt;<br>
+</p>
+<br>
+↓<br>
+<br>
+<ul>
+<li>Windows</li>
+<li>Macintosh</li>
+<li>Linux</li>
+</ul>
+<br>
+<p>
+<strong>要素の追加が可能だが、文法注意</strong>
+</p>
+
+
+<p>
+・正しいソースコード<br>
+&lt;ul&gt;<br>
+&lt;li&gt;Windows&lt;/li&gt;<br>
+&lt;li&gt;<strong>&lt;strong&gt;</strong>Macintosh<strong>&lt;/strong&gt;</strong>&lt;/li&gt;<br>
+&lt;li&gt;Linux&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+</p>
+
+<p>
+・間違ったソースコード<br>
+&lt;ul&gt;<br>
+&lt;li&gt;Windows&lt;/li&gt;<br>
+<strong>&lt;strong&gt;</strong>&lt;li&gt;Macintosh&lt;/li&gt;<strong>&lt;/strong&gt;</strong><br>
+&lt;li&gt;Linux&lt;/li&gt;<br>
+&lt;/ul&gt;<br>
+</p>
+<ul>
+<li>ul要素とli要素はセットで使う</li>
+<li>項目内のみ他のタグを使用可</li>
+<li>li要素外に他のタグ使用はNG</li>
+</ul>
+<br>
+<p>
+・パンくずリスト<br>
+ヘンデルとグレーテルのパンくずをちぎって帰り道の印として使ったことからの由来<br>
+Chrome F12キーでデベロッパーツールが開く<br>
+</p>
+
+<h4>番号付きリストの定義</h4>
+<p>
+ol要素 ordered list：番号付きリスト<br>
+li要素 list item：リスト項目<br>
+<br>
+&lt;ol&gt; → ul要素が枠を担当<br>
+ &lt;li&gt;Windows&lt;/li&gt; → li要素が項目を担当<br>
+ &lt;li&gt;Macintosh&lt;/li&gt; → li要素が項目を担当<br>
+ &lt;li&gt;Linux&lt;/li&gt; → li要素が項目を担当<br>
+&lt;/ol&gt;
+</p>
+↓<br>
+<ol> 
+<li>Windows</li>
+<li>Macintosh</li>
+<li>Linux</li>
+</ol>
+
+
+<h4>番号付きリストの属性</h4>
+<p>
+開始番号を変更<br>
+通常開始番号は「1」<br>
+start属性で開始番号変更可能<br>
+※HTML4.01では非推奨<br>
+※HTML5で非推奨解除<br>
+
+&lt;ol start="5"&gt;<br>
+ &lt;li&gt;Windows&&lt;/li&gt;<br>
+ &lt;li&gt;Macintosh&lt;/li&gt;<br>
+ &lt;li&gt;Linux&lt;/li&gt;<br>
+&lt;/ol&gt;<br>
+</p>
+↓
+<ol start="5">
+ <li>Windows</li>
+ <li>Macintosh</li>
+ <li>Linux</li>
+</ol>
+
+<p>
+連番を変更<br>
+value属性で連番変更可能<br>
+
+&lt;ol &gt;<br>
+ &lt;li&gt;Windows&&lt;/li&gt;<br>
+ &lt;li value="5"&gt;Macintosh&lt;/li&gt;<br>
+ &lt;li&gt;Linux&lt;/li&gt;<br>
+&lt;/ol&gt;<br>
+<br>
+↓
+<br>
+<ol>
+ <li>Windows</li>
+ <li value="5">Macintosh</li>
+ <li>Linux</li>
+</ol>
+</p>
+
+
+<h3>定義リストの定義</h3>
+<p>
+dl要素 unordered list：定義リスト<br>
+dt要素 definition term：定義項目名<br>
+dd要素 definition description：定義項目の説明<br>
+三つでセット<br>
+<br>
+
+&lt;dl&gt; → dl要素が枠を担当<br>
+ &lt;dt&gt;１日目&lt;/dt&gt; → dt要素が項目タイトルを担当<br>
+ &lt;dd&gt;18時から東京公演&lt;/dd&gt; → dd要素が項目説明を担当<br>
+ &lt;dt&gt;２日目&lt;/dt&gt; → dt要素が項目タイトルを担当<br>
+ &lt;dd&gt;20時から大阪公演&lt;/dd&gt; → dd要素が項目説明を担当<br>
+&lt;/dl&gt;<br>
+<br>
+↓
+<br>
+<dl>
+ <dt>１日目</dt>
+ <dd>18時から東京公演</dd>
+ <dt>２日目</dt>
+ <dd>20時から大阪公演</dd>
+</dl>
+
+
+dl,dt,ddタグでは、リスト一つに対し子供タグが2つなるため一つにくくれない。<br>
+後々CSSでデザインするときにul,liのほうが一つのリストに対して管理できるので編集しやす。<br>
+dt,ddタグ内に孫タグを入れると怒られる。<br>
+</p>
+
+
+
+
+<h3>テーブルの定義</h3>
+<p>
+table要素 table：表組、大枠<br>
+tr要素 table row：行<br>
+th要素 table header cell：見出しセル、太字<br>
+td要素 table data cell：通常セル、左揃え<br>
+<br>
+
+&lt;table&gt;<br>
+ &lt;tr&gt;&lt;th&gt;製品名&lt;/th&gt;&lt;th&gt;価格&lt;/th&gt;&lt;/tr&gt;<br>
+ &lt;tr&gt;&lt;td&gt;HDD 1TB&lt;/td&gt;&lt;td&gt;8,000円&lt;/td&gt;&lt;/tr&gt;<br>
+ &lt;tr&gt;&lt;td&gt;SSD 512GB&lt;/td&gt;&lt;td&gt;20,000円&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;/table&gt;<br>
+<br>
+↓<br>
+<br>
+<table border="1">
+ <tr><th>製品名</th><th>価格</th></tr>
+ <tr><td>HDD 1TB</td><td>8,000円</td></tr>
+ <tr><td>SSD 512GB</td><td>20,000円</td></tr>
+</table>
+</p>
+
+
+<h4>テーブルの行や列連結属性</h4>
+<p>
+colspan属性：列をまとめる<br>
+・列を連結する属性<br>
+・th要素もしくはtd要素にを記述<br>
+・まとめる列数を数値で指定<br>
+
+<br>
+
+rowspan属性：行をまとめる<br>
+・行を連結する属性<br>
+・th要素もしくはtd要素にを記述<br>
+・まとめる行数を数値で指定<br>
+<br>
+&lt;table border="1"&gt;<br>
+&lt;tr&gt;&lt;th&gt;セル1&lt;/th&gt;&lt;th&gt;セル2&lt;/th&gt;&lt;th&gt;セル3&lt;/th&gt;&lt;th&gt;セル4&lt;/th&gt;&lt;/tr&gt;<br>
+&lt;tr&gt;&lt;th&gt;セル5&lt;/th&gt;&lt;td&gt;セル6&lt;/td&gt;&lt;td&gt;セル7&lt;/td&gt;&lt;td&gt;セル8&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;tr&gt;&lt;th&gt;セル9&lt;/th&gt;&lt;td&gt;セル10&lt;/td&gt;&lt;td&gt;セル11&lt;/td&gt;&lt;td&gt;セル12&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;tr&gt;&lt;th&gt;セル13&lt;/th&gt;&lt;td&gt;セル14&lt;/td&gt;&lt;td&gt;セル15&lt;/td&gt;&lt;td&gt;セル16&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;/table&gt;<br>
+
+<table border="1">
+<tr><th>セル1</th><th>セル2</th><th>セル3</th><th>セル4</th></tr>
+<tr><th>セル5</th><td>セル6</td><td>セル7</td><td>セル8</td></tr>
+<tr><th>セル9</th><td>セル10</td><td>セル11</td><td>セル12</td></tr>
+<tr><th>セル13</th><td>セル14</td><td>セル15</td><td>セル16</td></tr>
+</table>
+<br>
+↓結合<br>
+<br>
+&lt;table border="1"&gt;<br>
+&lt;tr&gt;&lt;th&gt;セル1&lt;/th&gt;&lt;th colspan="3"&gt;セル2&lt;/th&gt;&lt;/tr&gt;<br>
+&lt;tr&gt;&lt;th rowspan="3"&gt;セル5&lt;/th&gt;&lt;td&gt;セル6&lt;/td&gt;&lt;td&gt;セル7&lt;/td&gt;&lt;td&gt;セル8&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;tr&gt;&lt;td&gt;セル10&lt;/td&gt;&lt;td&gt;セル11&lt;/td&gt;&lt;td&gt;セル12&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;tr&gt;&lt;td&gt;セル14&lt;/td&gt;&lt;td&gt;セル15&lt;/td&gt;&lt;td&gt;セル16&lt;/td&gt;&lt;/tr&gt;<br>
+&lt;/table&gt;<br>
+<br>
+<table border="1">
+<tr><th>セル1</th><th colspan="3">セル2</th></tr>
+<tr><th rowspan="3">セル5</th><td>セル6</td><td>セル7</td><td>セル8</td></tr>
+<tr><td>セル10</td><td>セル11</td><td>セル12</td></tr>
+<tr><td>セル14</td><td>セル15</td><td>セル16</td></tr>
+</table>
+</p>
+
+
+
+<h3>リンクの定義</h3>
+
+<h4>a要素</h4>
+<p>
+anchor：錨
+<ul>
+<li>文字色<br> 
+未訪問時：<font color="blue">青</font><br>
+訪問済時：<font color="#993366">紫</font><br></li>
+<li>下線が表示される</li>
+</ul>
+
+
+&lt;p&gt;テキスト&lt;a href=“ファイルの場所"&gt;リンクの対象&lt;/a&gt;テキスト&lt;/p&gt;<br>
+↓<br>
+テキスト<a href="ファイルの場所">リンクの対象</a>テキスト<br>
+<br>
+
+<strong>href属性：Hypertext REFerence（参照先）</strong><br>
+・リンク先ファイルの場所をパスで指定<br>
+<br>
+
+<strong>target属性：リンク先を表示する対象</strong><br>
+・「_blank」指定で別タブで表示<br>
+<br>
+&lt;a href="http://www.inutic.com/" target="_blank"&gt;inutic records&lt;a&gt;<br>
+<a href="http://www.inutic.com/" target="_blank">inutic records</a><br>
+</p>
+
+<h3>絶対パス</h3>
+<p>
+<font color="red">http</font>://<font color="blue">jobtech.jp</font>/<font color="green">html_css/index.html</font><br>
+<br>
+</p>
+<dl>
+<dt>プロトコル</dt>
+<dd><font color="red">http</font> - HyperText Transfer Protocol の頭文字<br>
+HTMLをやりとりする通信規約の意味</dd>
+<dt>サーバ名</dt>
+<dd><font color="blue">jobtech.jp</font> - サーバの名前</dd>
+<dt>パス名</dt>
+<dd><font color="green">html_css/index.html</font> - サーバ内のファイルの場所
+パス内の「/（スラッシュ）」はフォルダを意味する<br></li>
+主に外部サイトへのリンクに使用<br>
+広い地域から狭い地域へと対象を絞ってファイルを指定</dd>
+</dl>
+
+<h3>相対パス</h3>
+
+<strong>../img/photo.jpg</strong><br>
+<dl>
+<dt>/</dt>
+<dd>フォルダの意味</dd>
+<dt>./</dt> 
+<dd>自分のいる階層</dd>
+<dt>../</dt>
+<dd>1つ上の階層</dd>
+<dt>../../</dt>
+<dd>2つ上の階層</dd>
+</dl>
+
+
+<h3>課題</h3>
+<p>
+自己紹介文を考えておこう。<br>
+後で作成予定。好きなものを三つ挙げること。<br>
+</p>
+</body>
+</html>

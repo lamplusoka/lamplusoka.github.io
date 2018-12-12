@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>職業訓練校 | 2018.12.12 授業内容</title>
+  </head>
+  <body>
+    <h1 id="top">2018.12.12 授業内容</h1>
+
+<h2>今日の有難いお言葉</h2>
+タイピングが早いと仕事も早くなる。タイピングサイト等で鍛えてみよう。<br>
+<a href="http://neutralx0.net/sarada/play.html">Flashタイピング 皿打</a>
+<br>
+<p>
+本日は自己紹介サイトを作成予定。好きなもの三つ考えておこう。<br>
+ダンス<br>
+筋トレ<br>
+オカルト<br>
+</p>
+<br>
+<br>
+<h3>昨日の復習</h3>
+<p>
+&lt;ul&gt;<br>
+  &lt;li&gt;.....&lt;/li&gt;<br>
+  &lt;p&gt;...&lt;/p&gt; <strong>→ ulタグの直下にpタグは<span style="color:#FF0000">NG</span></strong><br>
+リストのタグを必ずセットで使う<br><br>
+&lt;li&gt;&lt;p&gt;...&lt;/p&gt;&lt;/li&gt; → <strong>は<span style="color:#0000CD">OK</span></strong><br>
+
+相対パスと絶対パス
+絶対パスは本番環境に置かないと動作確認できない。
+相対パスはテスト環境でもリンクテストができ、かつそのまま環境を納品しても使える。
+</p>
+<br>
+<h3>●ページ内リンク</h3>
+
+<h4>◆id属性</h4>
+
+<ol>
+  <li>ページ内の移動先にid属性を記述する</li>
+  <li>移動元にa要素を定義しherf属性に「#id名」を記述する</li>
+</ol>
+
+<p>属性値には好きな名前が可能だが、同一ファイル内に同じ名前が複数はNG。<br>
+半角英字、数字、-、_のみ使用可能。数字始まりNG。<br>
+＜サンプル＞<br>
+</p>
+<dl>
+ <dt>移動元</dt>
+  <dd><p>｜ <a href="#inutic">inutic records</a> ｜ nanicah ｜ KPUS ｜</p></dd>
+↓<br>
+↓<br>
+↓<br>
+
+ <dt>移動先</dt>
+  <dd id="inutic">
+<a href="http://www.inutic.com/" target="_blank">inutic records</a></dd>
+</dl>
+
+<p>
+ページのtopへ戻る場合、「#」だけを記述する。<br>
+ゴールの設定（id）がないとページトップへ移動する仕様。<br>
+<strong>&lt;p&gt;&lt;a href="#"&gt;ページトップへ戻る&lt;/a&gt;&lt;/p&gt;</strong><br>
+<br>
+最近はスマホ等のために、一つのページでスクロールさせて色々な情報を見せる縦長のページが多い。<br>
+そのためページ内リンクはよく使う。<br>
+</p>
+<br>
+<h4>◆img要素 （画像を表示）</h4>
+<p>
+<strong><span style="color:#32CD32;">HTML &lt;img src="ファイルパス" alt="代替文字"&gt;</span></strong><br>
+<strong><span style="color:#0000FF;">XHTML &lt;img src="ファイルパス" alt="代替文字“ /&gt;</span></strong><br>
+</p>
+<br>
+<ul>
+  <li><strong>src属性（必須属性）：source（参照先）</strong>
+    <ul>
+      <li>画像の場所をパスで指定</li>
+    </ul>
+  </li>
+  <li><strong>alt属性（任意属性）：alternative（代替）</strong>
+    <ul>
+      <li>※HTML5で任意属性を検討</li>
+      <li>画像が表示されない時の説明</li>
+      <li>盲目の方のための音声ブラウザで読まれる</li>
+      <li>alt属性は任意だが、検索サイトでの検索対象になるため書いたほうがよい。</li>
+      </ul>
+  </li>
+
+  <li><strong>width属性：幅</strong>
+    <ul>
+      <li>画像の幅を指定</li>
+      <li>width属性のみ指定時、同じ比率で画像の高さを変更</li>
+      <li>省略可能 省略時は画像本来の幅で表示</li>
+    </ul>
+  </li>
+<br>
+  <li><strong>height属性：高さ</strong>
+    <ul>
+      <li>画像の高さを指定</li>
+      <li>height属性のみ指定時、同じ比率で画像の幅も一緒に変更</li>
+      <li>省略可能 省略時は画像本来の高さで表示<br>
+          両方ともピクセル、もしくはパーセントで指定可能。<br>
+          指定しないと本来の画像のサイズ。
+
+        <ul>
+          <li>ピクセル
+            <ul>
+              <li>width="100" height="100" → ピクセル指定。</li>
+              <li>width="100" → 幅のみ指定した場合、高さは自動で計算してくれる。<br>
+                  <strong><span style="color:red;">注意</span></strong>！ width、heightを使用する場合は拡大しない、
+                  縦横の比率は守る。画像が荒れるため。</li>
+            </ul>
+          </li>
+          <li>パーセント
+            <ul>
+              <li>width="50%"</li>
+              <li>パーセント指定にすると、ブラウザの表示大きさを変えると画像の大きさも自動で変更してくれる。<br>
+                  パーセントは通常はCSSでやる。</li>
+              <li>画像はpタグやdivタグに入れることが多い。画像の後が自動で改行されないため。</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  <li><strong><span style="color:red;">耳より！</span></strong><br>
+      テスト環境で相対パスで画像のリンクを貼って、そのまま本番環境へ移行するとリンクが切れていることがある。<br>
+   <strong><span style="color:blue;">原因</span></strong><br>
+    アップするWebサーバー側(linux等)で拡張子の大文字、小文字を区別しており、別ファイルと認識されてリンク切れを起こす。<br>
+    Windowsは拡張子大文字小文字は判別しない。デジカメで撮った写真は大文字拡張子が多い。<br>
+    最初から、拡張子は小文字でそろえるなどのルール決めをしておくこと。
+  <li><strong>画像にリンクを定義</strong><br>
+    &lt;a href="リンク先URL"&gt;<br>
+    &lt;img src="ファイルパス" alt="代替文字"&gt;&lt;/a&gt;<br>
+    imgタグをaタグで囲むのみ。
+  </li>
+</ul>
+  
+<br>
+<br>
+<h3>◆実体参照</h3>
+<p>
+書き方：&amp;実体名;<br>
+<a href="http://rinrin.saiin.net/~aor/hms/cer">文字実体参照一覧</a><br>
+HTMLで意味を持つ記号や特殊な文字をブラウザに表示させる場合、<br>
+実体参照を使用しなければいけません。たとえばHTMLタグの開始と<br>
+終了を意味する「<」や「>」がHTMLで意味をもつ記号の代表です。<br>
+</p>
+<br>
+<br>
+<h3>◆要素のカテゴライズ</h3>
+<p>
+body要素の中で使われる各要素はブロックレベルとインラインのどちらかに属する<br>
+インライン要素内には置換インライン要素がある<br>
+</p>
+
+
+<ul>
+  <li><strong>ブロックレベル要素の特徴</strong>
+    <ul>
+      <li>親要素の幅いっぱいにボックスを形成</li>
+      <li>改行される</li>
+      <li>幅や高さを設定できる</li>
+      <li>ブロックレベル / インライン要素共に内包できる<br>
+          <strong>※ p要素のようにインライン要素しか内包できない例外有<br>
+          ブロックレベル要素内にブロックレベル要素を入れられるとあるが、文書構造的にNGならNG</strong></li>
+    </ul>
+  </li>
+  <li><strong>インライン要素の特徴</strong>
+    <ul>
+      <li>ブロックレベル要素内の特定部分に意味をもたせる</li>
+      <li>改行されず横並びになる</li>
+      <li>幅や高さを設定できない</li>
+      <li>インライン要素とテキストを内包できる<br>
+          ※ブロックレベル要素を含むことはできない<br>
+          例外 aタグのみ、インライン要素に含むことが可能。スマホのタップする時にある程度幅を確保するため</li>
+        <ul>
+          <li><strong>置換インライン要素</strong>
+            <ul>
+              <li>ブロックレベル要素内の特定部分に意味をもたせる</li>
+              <li>改行されず横並びになる</li>
+              <li><font="red">幅や高さを設定できる</font></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h4>メモ</h4>
+<p>
+知らないタグが出てきた場合、とりあえず要素を記述して、改行されたらブロック、されなければインライン。<br>
+<br>
+バージョン管理はGitHub等を使用するが、この講座では時間が無い。簡易的な方法で以下。<br>
+アップロードしたタイミングでフォルダのバックアップを取る。<br>
+フォルダ名を「a09_20181212_1」等、一日に複数回アップロードすることも考慮してサフィックス付与。<br>
+</p>
+<hr>
+<h3>◆HTMLファイルの命名規則</h4>
+<ul>
+  <li>「半角英数」「-（ハイフン）」「_（アンダースコア）」を使って名前をつける</li>
+  <li>最後に拡張子「.html」をつける</li>
+  <li>すべて小文字を使用（推奨）</li>
+</ul>
+
+<h4>indexというファイル名について</h4>
+URLにファイル名が入っていない場合、サーバの設定で「index」という名前のファイルを使用することが多い<br>
+※サーバの設定で変更できるが大抵「index」になっている<br>
+トップページやカテゴリトップページに「index」をよく使う<br>
+<br>
+<h3>◆スタイルシート（CSS）</h3>
+<ul>
+  <li><strong>CSSとは</strong><br>
+      Cascading Style Sheets<br>
+      Cascading:階段状の、滝のような<br>
+      Style:見た目<br>
+      Sheets:紙<br>
+      （滝のような性質をもった）見た目を定義する紙
+  </li>
+  <li>文書構造とデザインを分離できる<br>
+      CSS登場前:なんでもHTMLで記述<br>
+      文書構造と見た目が同じファイル<br>
+    <ul>
+      <li>見づらい</li>
+      <li>サイズが大きい</li>
+    </ul>
+  <br>
+      <strong><span style="color:blue;">CSS登場後:文書構造はHTML、デザインはCSS</span></strong><br>
+      文書構造と見た目が別ファイル<br>
+    <ul>
+      <li>見やすい</li>
+      <li>運用管理しやすい</li>
+      <li>細かいデザインを設定できる</li>
+      <li>デザインを一括管理できる  例）CSS一つを複数のhtmlで使用</li>
+      <li>デバイスごとにデザインできる  例）携帯、PC、印刷などでCSSを作る</li>
+    </ul>
+  </li>
+</ul>
+<br>
+<p>本日はここまで <a href="#">Topへ戻る</a></p>
+</body>
+</html>
+
+
+

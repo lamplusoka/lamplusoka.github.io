@@ -5,9 +5,10 @@
 
 
 <p>
-2018年12月3日より、Webデザインとプログラミングの勉強のため職業訓練校に入校しました。<br>
-習ったことを駆使して、授業のまとめを記載していきます。<br>
-どんどんページの内容が充実していくことを祈って、、、<br>
+2018年12月3日より、職業訓練校に入校しWebプログラミングを受講。<br>
+授業内容まとめを記載。<br>
+どんどんページの内容が充実していくことでしょう、、、<br>
 </p>
-<a href="/job training school/lesson_20181210.html">2018年12月10日<a><br>
-<a href="/job training school/lesson_20181211.html">2018年12月11日<a>
+<a href="/job training school/lesson_20181210.html">2018年12月10日 HTML_1<a><br>
+<a href="/job training school/lesson_20181211.html">2018年12月11日 HTML_2<a><br>
+<a href="/job training school/lesson_20181212.html">2018年12月12日 HTML_3<a>

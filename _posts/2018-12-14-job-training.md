@@ -9,7 +9,7 @@ title:  "職業訓練校 | 2018.12.14 授業内容"
 
 ## 本日の有難いお言葉
 
-##耳より情報
+## 耳より情報
 繰り返しても違和感がない背景画像を提供しているサイト
  - [subtlepatterns](https://www.toptal.com/designers/subtlepatterns/)
  - [bg-patterns](http://bg-patterns.com/) こちらは画像サイズも選べる

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>職業訓練校 | 2018.12.13 授業内容</title>
+	<link  href="lesson.css" rel="stylesheet" type="text/css">
+  </head>
+  	<body>
+			<h1 id="top">2018.12.13 授業内容</h1>
+			<h2>今日の有難いお言葉</h2>
+			<p>
+			覚えるために実際にHTMLページを作っていこう。好きなものやことで結構です。<br>
+			CSSのいい勉強サイト → <a href="https://saruwakakun.com/html-css/basic">https://saruwakakun.com/html-css/basic<a>
+			</p>
+
+			<h3>復習</h3>
+			<p>ブロックレベル要素は改行される</p>
+
+			<h4>emタグについて</h4>
+			<p>IEでは斜体になるが、Chromeでは斜体にならない。
+				デフォルトのフォントが異なるため。
+				chromeはMeiryo
+				IEはMPゴシック</p>
+			<br>
+			<h2>CSS</h2>
+			<h3>CSS記述のルール</h3>
+			<p>
+			<span style="color: red;">セレクタ</span> &#123; <span style="color: blue;">プロパティ</span> : <span style="color: green;">値</span> ; &#125;<br>
+			p &#123; color : red ; &#125;<br>
+					p要素の文字色を赤にする</p>
+
+			<p>CSSはHTMLファイル上でも記述可能。通常はファイルを分ける。
+			<br>HTML上にCSSを記述する際はheadタグ内のstyleタグを利用する。</p>
+			<dl>
+				<dt>サンプル↓</dt>
+					<dd>&lt;head&gt;</dd>
+					<dd>&lt;meta charset="UTF-8"&gt;</dd>
+					<dd>&lt;title&gt;ジョブテクスクール｜学校案内&lt;/title&gt;</dd>
+					<dd>&lt;style&gt;</dd>
+					<dd>p &#123; color: red; &#125;</dd>
+					<dd>&lt;/style&gt;</dd>
+					<dd>&lt;/head&gt;</dd>
+			</dl>
+			<ul>
+				<li>プロパティを複数記述可能。</li>
+				<li>通常は下記のように改行して記述する。</li>
+				<li>インデントはマスト。1行1デザイン定義。</li>
+				<li>プロパティ名「：」後の半角スペースは任意。見やすさ考慮。</li>
+			</ul>
+			<p>
+			p &#123; <br>
+				color: red; <br>
+				font-size: 20px; <br>
+			&#125;
+			</p>
+
+			<br>
+			<h4>CSSのコメント</h4>
+			<p>/* コメント */
+				サンプル
+				p &#123;
+				 color : red ; /* 文字色 */
+				 font-size : 20px ; /* 文字サイズ */
+				&#125;</p>
+			<br>
+			<p>練習の時はプロパテの役割を書いてみよう。本番はやめよう。</p>
+
+			<p>定義したデザイン要素があたっていない場合、Chromeの検証ツールで対象要素を選択して確認する。<br>
+				<br>
+				よくある記述ミス</p>
+			<ul>
+				<li>「&#125;」閉じかっこ忘れ</li>
+				<li>コロン、セミコロンのタイプミス</li>
+			</ul>
+			<br>
+			<br>
+
+			<h2>CSSの適用方式</h2>
+				<ol>
+				<li>インライン方式<br>
+				HTML内にstyle属性を追記して直接適用 → 実際あまり使わない。書けますよ程度で。</li>
+
+				<li>埋め込み方式<br>
+					HTMLのhead要素内にstyleタグで適用</li>
+
+				<li>外部リンク方式<br>
+				外部CSSファイルを作成して適用 → こちらが9割5分ほど使われている。</li>
+				</ol>
+
+			<h3>外部リンク方式</h3>
+				<ol>
+					<li>拡張子「.css」の定義ファイル作成</li>
+					<li>HTMLファイルのhead要素内にlinkタグを作成してCSSファイルを読み込む</li>
+					<li>headタグ内の文字コードより下に記載したほうがよい</li>
+				</ol>
+
+			<p>&lt;link href=“ファイルパス" rel="stylesheet" type="text/css"&gt; <br>
+			<ul>
+				<li>link属性、rel属性が必須</li>
+				<li>type属性は任意だが付けたほうがよい。text/css。mime→要確認</li>
+				<li>rel属性は「stylesheet」で決め打ち</li>
+			</ul>
+
+			<p>検証ツールのCSS部分右上に、どこのCSSで何行目、まで表示される。</p>
+			<br><br>
+			<h4>@charset"文字コード";</h4>
+			<p>ファイルの文字コード。CSS内は半角英数で記述するため省略されること多々あり。</p>
+			<br>
+			<p>CSSファイルは複数読み込み可能。後の行に読み込んだほうが勝つ。後勝ち。<br>
+			後勝ちにならないこともある。それは後日、応用授業で。</p>
+			<br>
+			<h4>media属性</h4>
+			<table border="1">
+			<tr><th>名前</th><th>適用対象</th></tr>
+			<tr><td>print</td><td>プリンタでの印刷、あるいは印刷のプレビュー画面</td></tr>
+			<tr><td>screen</td><td>一般的なコンピュータスクリーン。</td></tr>
+			</table>
+			<p>例）printは印刷画面起動時のCSS</p>
+			<br>
+			<h4>@import.css</h4>
+			<p>CSSからCSSを読み込むことが可能。</br>
+			<strong>@impor(ファイルパス)</strong></p>
+
+			<p>通常デザインページ用CSS、イベントページ用CSSがあるとしてたまにイベント用を反映させたい場合<br>
+			@importはページ上部に記載するルール。そのため以下の方法をとる。<br>
+			<br>
+			三つ目のcssファイルを用意して以下の記述<br>
+			------<br>
+			@import(通常CSS)<br>
+			@import(イベント用CSS)<br>
+			------<br>
+			これならイベント用が後勝ちとなる。<br>
+			デメリットとして、読み込みが遅くなる。大規模サイトで使うくらい。</p>
+			<br>
+			<h2>文章のスタイルを定義</h2>
+
+			<h4>colorプロパティ</h4>
+			文字の色を定義
+			color: red;
+			カラーキーワードはあまり使用しない。
+			色番号を使う。#始まりの16進数
+			# FF 00 00 →省略形 →#F00(RGBの各二桁が同じ数字の場合可能。)
+				R	 G  B
+			カラーのサンプル：カラーピッカー
+			Chromeのデベロッパーツールでほかの色の適用した場合の見た目確認が可能。
+			IEが16進数の透明機能未対応
+
+			IEは色番号、不透明度10進数表記には対応している。
+
+			10進数表記 rgb( 255 , 0 , 0 )
+			10進数表記不透明度 rgba(70, 115, 199, .5); → 透明度「.5」は0.5。0は省略可。
+
+			<h4>font-size: 20px;</h4>
+			文字の大きさを定義する
+			単位
+			px ピクセル
+			em エム
+			%  パーセント(親要素の大きさに対する割合をパーセント指定 bodyタグのデフォルトは16px)
+
+
+
+			<h4>font-family:</h4>
+			文字の書体を定義する
+			bodyにかけることが多い
+			英語、日本語に対応したフォントを複数指定しましょう。
+			注意!
+			ＭＳ Ｐゴシックの「ＭＳ Ｐ」は大文字
+
+			font-family: "ＭＳ Ｐゴシック", osaka, sans-serif;
+			コピペでもってこよう
+
+			<h3>書体指定の注意</h3>
+			<ul>
+				<li>指定書体が閲覧者のパソコンに存在する場合にのみ適用<br>
+				※存在しない場合 次の候補書体 → キーワード → 初期設定書体</li>
+				<li>指定書体が閲覧者のパソコンに存在しないことを想定して、複数の書体を「,(カンマ)」区切りで指定</li>
+				<li>最後にフォントのキーワード指定を推奨<br>
+				※iOS6の標準書体は明朝なので「sans-serif」指定推奨</li>
+				<li>フォント名にスペースがある場合「"(ダブルクォート)」か「‘(シングルクォート)」で囲む</li>
+			</ul>
+
+			<h3>Web フォント</h3>
+			<p><a href="https://fonts.google.com/">google fonts<a></p>
+			<ol>
+				<li>ほしい書体の＋を押す
+				<li>下に表示される「1Fmaily selected」をクリック
+				<li>@importをクリック→「@import・・・」をコピー
+				<li>CSSの上部へ張り付け
+				<li>google fontsにもどって「Specify in CSS」のフォント名をコピー→CSSのfont-family:へ張り付け
+			</ol>
+			<p>
+			Webフォントを使うと、閲覧者のPCに該当フォントがインストールされていなくても表示する。<br>
+			ちょっと変わったフォントを使いたい場合に有効だが、複数指定すると読み込みが遅い。<br>
+			ページ全体のフォント設定はcssのbodyタグに入れることで統一可能。<br>
+			自己紹介ページのフォントも変えてみよう。<br>
+			<br>
+			<a href="https://wordmark.it/">ワードマークイット<a><br>
+			自分のPCの中に入っているフォントで入力した文字を表示してくれるサイト</p>
+			<br>
+			<h4>font-weight: bold;</h4>
+			<p>
+			文字の太さを定義する<br>
+			bold：太字(700)<br>
+			normal：標準(400)<br>
+			数値：400,700を覚えておけばよい</p>
+			<br>
+			<h4>font-style: normal;</h4>
+			<p>
+			文字のスタイルを定義する<br>
+			italic 斜体にする<br>
+			<br>
+			preタグの書体は、bodyタグで設定したfont-familyは継承しない。特殊。
+			preは成形済み文書のタグ。そのためbodyの影響を受けない。
+			日本語を斜体にするとみずらくなる。基本的にfont-sytleは斜体を戻す時に使う。</p>
+			<br>
+
+			<h4>text-decoration: none;</h4>
+			<p>文字の装飾を定義する</p>
+			<table border="1">
+			<tr><th>値</th><th>内容</th></tr>
+			<tr><td>underline</td><td>下線をつける</td></tr>
+			<tr><td>overline/td><td>上線をつける</td></tr>
+			<tr><td>line-through/td><td>取り消し線をつける</td></tr>
+			<tr><td>none/td><td>テキストの装飾をなくす</td></tr>
+			</table>
+			<p>
+			リンクのアンダーラインを消したい時などにnone<br>
+			青文字下線はリンクに間違われるため使用しない。</p>
+			<br>
+			<h4>line-height: 1.6;</h4>
+			行の高さを定義する
+			<table border="1">
+			<tr><th>値</th><th>内容</th></tr>
+			<tr><td>単位付きの数値</td><td>単位に応じた数値</td></tr>
+			<tr><td>単位なしの数値</td><td>文字の高さを1とする倍率</td></tr>
+			<tr><td>割合</td><td>文字の高さを100%とする割合</td></tr>
+			<tr><td>normal</td><td>要素が持つ初期値</td></tr>
+			</table>
+			<p>指定する時は「単位なし数値」がよい→単位ありだと、余白(20px)より文字(50px)が大きく指定した場合、文字が重なる。<br>
+			大体1.4～1.8位までがよく使われる数値<br>
+			<br>
+			IEとChromeの行間が異なるため、bodyタグで指定すると統一できる。<br>
+			ページ全体の書体、行間は実際にbodyタグで指定することがよくある。</p>
+			<br>
+
+			<h4>text-align: center;</h4>
+			<p>行揃えを定義する<br>
+			セレクタ指定要素内(枠)を行揃えする<br>
+			要素（枠）自体は中央揃えされない</p>
+			<table border="1">
+			<tr><th>値</th><th>内容</th></tr>
+			<tr><td>left</td><td>左揃え</td></tr>
+			<tr><td>right</td><td>右揃え</td></tr>
+			<tr><td>center</td><td> 中央揃え</td></tr>
+			</table>
+
+			<p>テーブル要素に使える。テーブルの見出しせるはデフォルトで中央揃いなので左右にずらせる。</p>
+
+
+			<h4>インデントを定義する</h4>
+			<p>text-indent: 1em; → 単位付きの数値<br>
+			段落の最初をインデントする</p>
+
+
+			<h3>ボックスのスタイルを定義する</h3>
+			<p>ボックスとは各要素の範囲のこと</p>
+
+			<h4>background-color:</h4>
+			<p>背景に色を定義する<br>
+			カラーキーワード、色番号（10、16進数）<br>
+			色番号（割合） 例） background-color: rgba(100%, 0%, 0%, .5);<br>
+			</p>
+
+
+				</body>
+			</html>
+
+

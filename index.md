@@ -12,4 +12,4 @@
 <a href="/job training school/lesson_20181210.html">2018年12月10日 HTML_1<a><br>
 <a href="/job training school/lesson_20181211.html">2018年12月11日 HTML_2<a><br>
 <a href="/job training school/lesson_20181212.html">2018年12月12日 HTML_3<a><br>
-<a href="/job training school/lesson_20181213.html">2018年12月13日 HTML_3<a>
+<a href="/job training school/lesson_20181213.html">2018年12月13日 CSS_1<a>

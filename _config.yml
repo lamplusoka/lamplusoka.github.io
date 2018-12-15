@@ -4,7 +4,7 @@ title: Lamplusの日記
 name.title: Lamplusの日記name.title
 site.title: Lamplusの日記site.title
 
-description: > # this means to ignore newlines until "baseurl:"
+description: Welcome
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" 
 

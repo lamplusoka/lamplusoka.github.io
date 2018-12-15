@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "職業訓練校 | 2018.12.14 授業内容"
-date:   2018-12-14 21:21:21
+date: 2018-12-14 21:21:21
 categories: job-training
 ---
 

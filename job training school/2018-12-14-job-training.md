@@ -263,7 +263,7 @@ widthの設定が大前提
 <font color="red"><strong>マージンの上下コンテンツ余白は値の大きい方</strong></font>  
 <font color="red"><strong>paddingの上下コンテンツ余白は上下の値を足す</strong></font>  
 
-[マージンの余白](img/margin_padding.jpg)
+![マージンの余白](img/margin_padding.jpg)
 
 親領域にborderやpaddingが無い場合、子供の領域が親より多きれば親を突き抜ける。
 親領域にborderやpaddingを設定すると、子供領域はその中に納まるが、親領域内でマージンが加算される→見た目親領域が大きくなる。

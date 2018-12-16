@@ -295,3 +295,6 @@ box-sixing: border-box
 -moz-box-sixing: border-box → ファイアーフォックスだけに適用  
 -webkit-box-sixing: border-box → Chromeだけに適用  
 Can I useで確認できる。基本的に使わない方がよい。  
+
+<a href="#">Topへ戻る</a>
+<a href="http://www.lamplus.ml/">ホーム</a>

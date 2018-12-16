@@ -8,6 +8,7 @@ categories: job-training
 
 # 2018.12.14 授業内容
 
+
 ## 耳より情報
 繰り返しても違和感がない背景画像を提供しているサイト
  - [subtlepatterns](https://www.toptal.com/designers/subtlepatterns/)
@@ -92,14 +93,14 @@ CSS3より導入で新しめ。TeraPadで大文字にならない。こういっ
 background-sizeを一括に追加する場合は、ポジションの後ろにbackground-size  
 ```css
 body{  
-    background: #ccc url(img/boxbg.gif) no-repeat <font color="red">center top/20px 20px</font> fixed;  
+    background: #ccc url(img/boxbg.gif) no-repeat center top/20px 20px fixed;  
 }  
 ```
 以下のように記載すると、background一括設定が勝ち、  
 background-sizeの設定が無くても初期値が設定されてしまう。 
 ```css 
 body{  
-    <font color="red">background-size: 20px 20px;</font> → 一括設定の前に書いてしまうとNG  
+    background-size: 20px 20px; → 一括設定の前に書いてしまうとNG  
     background: #ccc url(img/boxbg.gif) no-repeat center top fixed;  
 }  
 ```
@@ -296,5 +297,5 @@ box-sixing: border-box
 -webkit-box-sixing: border-box → Chromeだけに適用  
 Can I useで確認できる。基本的に使わない方がよい。  
 
-<a href="#">Topへ戻る</a>  
-<a href="http://www.lamplus.ml/">ホーム</a>
+<a href="#">topへ</a>  
+[ホーム](http://www.lamplus.ml/)

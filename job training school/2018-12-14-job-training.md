@@ -268,31 +268,30 @@ widthの設定が大前提
 親領域にborderやpaddingが無い場合、子供の領域が親より多きれば親を突き抜ける。
 親領域にborderやpaddingを設定すると、子供領域はその中に納まるが、親領域内でマージンが加算される→見た目親領域が大きくなる。
 
-<h4>ボックスサイズの考え方</h4>
-PCサイトの表示はだいたい幅960px
-要素の幅はすべての要素を足した値となる。
-ボックスの幅   = width + 左右padding + 左右border + 左右margin
-ボックスの高さ = height + 上下padding + 上下border + 上下margin
-デザインを考慮するうえで、widthとheightのプロパティ値だけではなく、ボックス全体の幅と高さであることを気を付けること。
-widthはあくまでもコンテンツ領域の幅のみとなる。
+### ボックスサイズの考え方
+PCサイトの表示はだいたい幅960px  
+要素の幅はすべての要素を足した値となる。  
+ボックスの幅   = width + 左右padding + 左右border + 左右margin  
+ボックスの高さ = height + 上下padding + 上下border + 上下margin  
+デザインを考慮するうえで、widthとheightのプロパティ値だけではなく、  
+ボックス全体の幅と高さであることを気を付けること。  
+widthはあくまでもコンテンツ領域の幅のみとなる。  
 
 
-ボックスサイズの算出方法を定義する
-box-sixingプロパティ
-widthやheightがどの領域の値を指すのか定義する。
-CSS3で追加されたプロパティ
+### ボックスサイズの算出方法を定義する
+box-sixingプロパティ  
+widthやheightがどの領域の値を指すのか定義する。  
+CSS3で追加されたプロパティ  
 box-sixing: border-box
-
-					<table border="1">
-						<tr><th>値</th><th>内容</th></tr>
-						<tr><td>content-box(初期値)</td><td>パディングとボーダーを含まない</td></tr>
-						<tr><td>border-box</td><td>パディングとボーダーを含まない</td></tr>
-					</table>
+|値|内容  |
+|---|---|
+|content-box(初期値)|パディングとボーダーを含まない|
+|border-box|パディングとボーダーを含まない|
 
 
-ペンダープレフィックス
-仕様が固まっていない機能をchromeやファイアーフォックスは使えるようにしてしまうことがある。
-そういった時に設定するプロパティ名
--moz-box-sixing: border-box → ファイアーフォックスだけに適用
--webkit-box-sixing: border-box → Chromeだけに適用
-Can I useで確認できる。基本的に使わない方がよい。
+ベンダープレフィックス
+仕様が固まっていない機能をchromeやファイアーフォックスは使えるようにしてしまうことがある。  
+そういった時に設定するプロパティ名  
+-moz-box-sixing: border-box → ファイアーフォックスだけに適用  
+-webkit-box-sixing: border-box → Chromeだけに適用  
+Can I useで確認できる。基本的に使わない方がよい。  

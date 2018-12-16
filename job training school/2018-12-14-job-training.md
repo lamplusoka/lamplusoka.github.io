@@ -204,8 +204,9 @@ border: solid 10px #F00;
 |border-widthの値|	10px|
 |border-colorの値|	#F00|
 
-border-styleプロパティは必須 指定する順番は自由 border-styleプロパティ以外の値は省略可  個別に値を指定するプロパティ  
-left, right, top, bottom 
+border-styleプロパティは必須 
+指定する順番は自由 border-styleプロパティ以外の値は省略可   
+個別に値を指定するプロパティ：left, right, top, bottom  
 border-left: solid 10px blue;
 
 

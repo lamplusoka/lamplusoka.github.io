@@ -6,5 +6,5 @@ site.title: Lamplusの日記site.title
 
 description: 日々の勉強内容、調べたことなどを記載していきます。
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" 
+url: "http://www.lamplus.ml/" 
 

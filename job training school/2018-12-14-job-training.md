@@ -168,6 +168,7 @@ padding-light: 30px;
 
 #### 枠線の種類（線種）を定義する
 border-style: solid;
+
 |値 |内容  |
 |---|---|
 |none（初期値）|	表示しない|

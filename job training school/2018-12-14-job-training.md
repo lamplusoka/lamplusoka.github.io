@@ -285,10 +285,11 @@ box-sixingプロパティ
 widthやheightがどの領域の値を指すのか定義する。  
 CSS3で追加されたプロパティ  
 box-sixing: border-box
+
 |値|内容  |
 |---|---|
 |content-box(初期値)|パディングとボーダーを含まない|
-|border-box|パディングとボーダーを含まない|
+|border-box|パディングとボーダーを含む|
 
 
 ベンダープレフィックス

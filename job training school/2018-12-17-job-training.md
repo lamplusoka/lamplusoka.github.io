@@ -271,4 +271,7 @@ box-shadow: 0 5px 0 #ddeeee
 |5つ目|：色（省略可）|
 |6つ目|：影の位置（省略可）：外側（省略時） 内側inset|
 
+<a href="#">topへ</a>  
+[ホーム](http://www.lamplus.ml/)
+
 

@@ -337,9 +337,9 @@ a[href$=".pdf"]
 </ul>
 ```
 
-before:対象要素の前に追加
-after:対象要素の後に追加
-要素名::befor {
+before:対象要素の前に追加  
+after:対象要素の後に追加  
+要素名::befor {  
 	content:"    "; ← contentは必須
 ```css
 a[href$=".pdf"]::after {
@@ -351,7 +351,7 @@ a[href$=".pdf"]::after {
 }
 ```
 ↓↓↓
-結果、HTML上の文字の後ろに定義したcontent及びスタイルがスイカされる。  
+結果、HTML上の文字の後ろに定義したcontent及びスタイルが追加される。  
 PDFリンク → PDFリンクPDF  
 ![セレクタ―](img/serector.jpg)
 

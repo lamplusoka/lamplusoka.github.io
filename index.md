@@ -16,5 +16,6 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 - [2018年12月14日 CSS_2](/job training school/2018-12-14-job-training)
 - [2018年12月17日 CSS_3](/job training school/2018-12-17-job-training)
 - [2018年12月18日 CSS_4](/job training school/2018-12-18-job-training)
-- [2018年12月19日 HTML_レイアウト](/job training school/2018-12-19-job-training)
+- [2018年12月19日 HTML_レイアウト_1](/job training school/2018-12-19-job-training)
+- [2018年12月20日 HTML_レイアウト_2](/job training school/2018-12-20-job-training)
 

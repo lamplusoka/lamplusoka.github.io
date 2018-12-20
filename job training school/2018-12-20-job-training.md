@@ -59,9 +59,9 @@ http://jobtech.jp/
 https://fontawesome.com/  
 
 手順  
- 1 以下がからcssのURLリンクを取得してhtmlのヘッドタグに記載
-   https://fontawesome.com/start
- 2 好みのアイコンを開いて上部のiタグをコピーし、HTMLの挿入したい箇所へ張り付け
+ 1 以下がからcssのURLリンクを取得してhtmlのヘッドタグに記載  
+   [スタート](https://fontawesome.com/start)  
+ 2 好みのアイコンを開いて上部のiタグをコピーし、HTMLの挿入したい箇所へ張り付け  
  3 もしくは入れたいタグにclassを追加して、以下のようにCSSに記述  
 
 ```css

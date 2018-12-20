@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* グループ確認用 */
+div {
+  border: solid 1px #000;
+  margin: 10px;
+}
+
+/* オリジナルCSS */
+body {
+  background-color: #ccc;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+}
+#container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.content {
+  float: left;
+  width: 900px;
+}
+
+.main {
+  float: right;
+  width: 620px;
+}
+
+.sub {
+  width: 230px;
+  float: left;
+}
+
+.aside {
+  float: right;
+  width: 230px;
+}
+

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexテスト</title>
+  <link rel="stylesheet" href="style00.css">
+</head>
+<body>
+<h2>HTML構造</h2>
+<div class="container">
+  <div class="item">Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+</div>
+
+<h2>test1 | Flex基本形</h2>
+<p>親要素指定プロパティ: display: flex;</p>
+<div class="container test1">
+  <div class="item">Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+</div>
+
+<h2>test2 | 折り返し設定</h2>
+<p>親要素指定プロパティ:flex-wrap</p>
+<div class="container test2">
+  <div class="item">Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+  <div class="item">Flexアイテム4</div>
+  <div class="item">Flexアイテム5</div>
+  <div class="item">Flexアイテム6</div>
+  <div class="item">Flexアイテム7</div>
+  <div class="item">Flexアイテム8</div>
+  <div class="item">Flexアイテム9</div>
+</div>
+
+<h2>test3 | 横並び設定</h2>
+<p>親要素指定プロパティ:flex-direction</p>
+<div class="container test3-1">
+  <div class="item">Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+  <div class="item">Flexアイテム4</div>
+  <div class="item">Flexアイテム5</div>
+  <div class="item">Flexアイテム6</div>
+</div>
+
+<div class="container test3-2">
+  <div class="item">Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+  <div class="item">Flexアイテム4</div>
+  <div class="item">Flexアイテム5</div>
+  <div class="item">Flexアイテム6</div>
+</div>
+
+<h2>test4 | flex-directionとflex-wrapをまとめて指定</h2>
+<p>親要素指定プロパティ:flex-flow</p>
+<div class="container test4-1">
+  <div class="item">Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+  <div class="item">Flexアイテム4</div>
+  <div class="item">Flexアイテム5</div>
+  <div class="item">Flexアイテム6</div>
+</div>
+
+<div class="container test4-2">
+  <div class="item">Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+  <div class="item">Flexアイテム4</div>
+  <div class="item">Flexアイテム5</div>
+  <div class="item">Flexアイテム6</div>
+</div>
+
+<h2>test5 | 横方向位置揃え</h2>
+<p>親要素指定プロパティ:justify-content</p>
+<div class="container test5-1">
+  <div class="item">Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+</div>
+
+<div class="container test5-2">
+  <div class="item">Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+</div>
+
+<div class="container test5-3">
+  <div class="item">Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+</div>
+
+<h2>test6 | 縦方向位置揃え</h2>
+<p>親要素指定プロパティ:align-items</p>
+<div class="container test6-1">
+  <div class="item">Flexアイテム1<br>Flexアイテム1<br>Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+</div>
+
+<div class="container test6-2">
+  <div class="item">Flexアイテム1<br>Flexアイテム1<br>Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+</div>
+
+<div class="container test6-3">
+  <div class="item">Flexアイテム1<br>Flexアイテム1<br>Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+</div>
+
+<div class="container test6-4">
+  <div class="item">Flexアイテム1<br>Flexアイテム1<br>Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+</div>
+
+<div class="container test6-5">
+  <div class="item" style="font-size:20px;">Flexアイテム1<br>Flexアイテム1<br>Flexアイテム1</div>
+  <div class="item" style="font-size:10px;">Flexアイテム2</div>
+  <div class="item" style="font-size:30px;">Flexアイテム3</div>
+</div>
+
+<h2>test7 | 縦方向位置揃え（複数行）</h2>
+<p>親要素指定プロパティ:align-content<br>
+※flex-wrap:nowrap;指定時は複数行にならないため無効</p>
+<div class="container test7-1">
+  <div class="item">Flexアイテム1<br>Flexアイテム1<br>Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+  <div class="item">Flexアイテム4</div>
+  <div class="item">Flexアイテム5<br>Flexアイテム5</div>
+  <div class="item">Flexアイテム6</div>
+</div>
+
+<div class="container test7-2">
+  <div class="item">Flexアイテム1<br>Flexアイテム1<br>Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+  <div class="item">Flexアイテム4</div>
+  <div class="item">Flexアイテム5<br>Flexアイテム5</div>
+  <div class="item">Flexアイテム6</div>
+</div>
+
+<div class="container test7-3">
+  <div class="item">Flexアイテム1<br>Flexアイテム1<br>Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+  <div class="item">Flexアイテム4</div>
+  <div class="item">Flexアイテム5<br>Flexアイテム5</div>
+  <div class="item">Flexアイテム6</div>
+</div>
+
+<div class="container test7-4">
+  <div class="item">Flexアイテム1<br>Flexアイテム1<br>Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+  <div class="item">Flexアイテム4</div>
+  <div class="item">Flexアイテム5<br>Flexアイテム5</div>
+  <div class="item">Flexアイテム6</div>
+</div>
+
+<div class="container test7-5">
+  <div class="item">Flexアイテム1<br>Flexアイテム1<br>Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+  <div class="item">Flexアイテム4</div>
+  <div class="item">Flexアイテム5<br>Flexアイテム5</div>
+  <div class="item">Flexアイテム6</div>
+</div>
+
+<div class="container test7-6">
+  <div class="item">Flexアイテム1<br>Flexアイテム1<br>Flexアイテム1</div>
+  <div class="item">Flexアイテム2</div>
+  <div class="item">Flexアイテム3</div>
+  <div class="item">Flexアイテム4</div>
+  <div class="item">Flexアイテム5<br>Flexアイテム5</div>
+  <div class="item">Flexアイテム6</div>
+</div>
+
+<h2>test8 | 表示順の指定（数値の小さい順に表示）</h2>
+<p>子要素指定プロパティ:order<br>
+※親要素に「display:flex;」が指定されていないと有効にならない</p>
+<div class="container test8">
+  <div class="item item1">1(order:3)</div>
+  <div class="item item2">2(order:2)</div>
+  <div class="item item3">3(order:1)</div>
+  <div class="item item4">4(指定なし)</div>
+  <div class="item item5">5(order:3)</div>
+  <div class="item item6">6(order:-1)</div>
+</div>
+
+<h2>test9 | 親要素の幅が広い場合の余白の比率を指定</h2>
+<p>子要素指定プロパティ:flex-grow<br>
+※親要素に「display:flex;」が指定されていないと有効にならない</p>
+<div class="container test9">
+  <div class="item item1">1(flex-grow:1)</div>
+  <div class="item item2">222222(flex-grow:2)</div>
+  <div class="item item3">3(flex-grow:3)</div>
+  <div class="item item4">444444(指定なし)</div>
+</div>
+
+<h2>test10 | 親要素の幅が狭い場合の縮む比率を指定</h2>
+<p>子要素指定プロパティ:flex-shrink<br>
+※親要素に「display:flex;」が指定されていないと有効にならない</p>
+<div class="container test10">
+  <div class="item item1">1(flex-shrink:1)</div>
+  <div class="item item2">2(flex-shrink:2)</div>
+  <div class="item item3">3(flex-shrink:3)</div>
+  <div class="item item4">4(flex-shrink:0)</div>
+</div>
+</body>
+</html>

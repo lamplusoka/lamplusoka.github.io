@@ -372,7 +372,7 @@ PDFリンク → PDFリンクPDF
 id > class そのためあまりidは使わない。    
 
 CSSだけで画像スライドショーをやってみる  
-https://q-az.net/slideshow-only-css/  
+[スライドショー](https://q-az.net/slideshow-only-css/)  
 
 
 <a href="#">topへ</a>  

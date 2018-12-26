@@ -19,4 +19,5 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 - [2018年12月20日 HTML_レイアウト_2](/job training school/2018-12-20-job-training)
 - [2018年12月21日 HTML_スマホ対応サイト作成_1](/job training school/2018-12-21-job-training)
 - [2018年12月25日 HTML_スマホ対応サイト作成_2, HTML デザイン変更](/job training school/2018-12-25-job-training)
+- [2018年12月26日 Photoshop_Web用の環境設定, 操作方法_1](/job training school/2018-12-26-job-training)
 

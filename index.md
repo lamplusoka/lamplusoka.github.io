@@ -2,18 +2,6 @@
 title: lamplusの日記
 outline: 日々の勉強内容、調べたことなどを記載していきます。
 ---
-<script>
-  (function() {
-    var cx = '001277966893069740206:on8xlvs9wek';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
 
 2018年12月3日より、職業訓練校に入校しWebプログラミングを受講。
 授業内容まとめを記載。

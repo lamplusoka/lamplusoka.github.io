@@ -136,10 +136,10 @@ displayプロパティはあくまでも表示方法の定義であり、要素�
 ほかにもある。
 
 
-listでリンクを作る際は、<li>内の<a>要素を使うこと。<li>を指定すると文字外の領域がリンクにならない。  
+listでリンクを作る際は、li要素内のa要素を使うこと。li要素を指定すると文字外の領域がリンクにならない。  
 
 サルワカのページで見出しの例がある。今なら読み解ける。  
-(https://saruwakakun.com/html-css/reference/h-design)
+[サルワカ](https://saruwakakun.com/html-css/reference/h-design)
 
 
 <a href="#">topへ</a>  

@@ -21,3 +21,17 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 - [2018年12月21日 HTML_スマホ対応サイト作成_1](/job training school/2018-12-21-job-training)
 - [2018年12月25日 HTML_スマホ対応サイト作成_2, HTML デザイン変更](/job training school/2018-12-25-job-training)
 
+
+
+<script>
+  (function() {
+    var cx = '001277966893069740206:on8xlvs9wek';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>

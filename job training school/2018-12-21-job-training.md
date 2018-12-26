@@ -4,7 +4,7 @@
 ### positionプロパティ
 要素の配置方法
 position:absolute;  
-[CSSのpositionとは？]https://saruwakakun.com/html-css/basic/relative-absolute-fixed
+[CSSのpositionとは？](https://saruwakakun.com/html-css/basic/relative-absolute-fixed)
 
 ■positionの値  
  - static：初期値はこれ。指定することはほとんどない
@@ -58,8 +58,8 @@ margin: 0;
 
 ### z-indexプロパティ
 z-index: 0;
-前面・背面の位置調整ができる
-■数値
+前面・背面の位置調整ができる  
+■数値  
 数値が小さいほど背面  
 数値が大きいほど前面    
 position「relative」「absolute」「fixed」が指定されている時だけ機能する。  

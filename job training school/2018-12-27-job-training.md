@@ -1,6 +1,7 @@
 # 2018.12.27 授業内容
 
 ## 今日の有難いお言葉
+本日は無し！  
 
 ## Adobe Photoshop
 [Photoshop講座](docs/photoshop.pdf)  

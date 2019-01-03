@@ -4,18 +4,18 @@
 ## 昨日の復習と続き
 floatのおさらい
 
-[floatおさらい問題](osarai/おさらいfloat_ヒントあり.pdf)  
-[問題1 html](osarai/layout01.html) [問題1 css](osarai/layout01.css)  
-[問題2 html](osarai/layout02.html) [問題2 css](osarai/layout02.css)  
-[問題3 html](osarai/layout03.html) [問題3 css](osarai/layout03.css)  
-[問題4 html](osarai/layout04.html) [問題4 css](osarai/layout04.css)  
-[問題5 html](osarai/layout05.html) [問題5 css](osarai/layout05.css)  
+[floatおさらい問題](docs/osarai/おさらいfloat_ヒントあり.pdf)  
+[問題1 html](docs/osarai/layout01.html) [問題1 css](docs/osarai/layout01.css)  
+[問題2 html](docs/osarai/layout02.html) [問題2 css](docs/osarai/layout02.css)  
+[問題3 html](docs/osarai/layout03.html) [問題3 css](docs/osarai/layout03.css)  
+[問題4 html](docs/osarai/layout04.html) [問題4 css](docs/osarai/layout04.css)  
+[問題5 html](docs/osarai/layout05.html) [問題5 css](docs/osarai/layout05.css)  
 
-[回答1 html](osarai/a_layout01.html) [回答1 css](osarai/a_layout01.css)  
-[回答2 html](osarai/a_layout02.html) [回答1 css](osarai/a_layout02.css)  
-[回答3 html](osarai/a_layout03.html) [回答1 css](osarai/a_layout03.css)  
-[回答4 html](osarai/a_layout04.html) [回答1 css](osarai/a_layout04.css)  
-[回答5 html](osarai/a_layout05.html) [回答1 css](osarai/a_layout05.css)  
+[回答1 html](docs/osarai/a_layout01.html) [回答1 css](docs/osarai/a_layout01.css)  
+[回答2 html](docs/osarai/a_layout02.html) [回答1 css](docs/osarai/a_layout02.css)  
+[回答3 html](docs/osarai/a_layout03.html) [回答1 css](docs/osarai/a_layout03.css)  
+[回答4 html](docs/osarai/a_layout04.html) [回答1 css](docs/osarai/a_layout04.css)  
+[回答5 html](docs/osarai/a_layout05.html) [回答1 css](docs/osarai/a_layout05.css)  
 
 
 clearfixを反映させる要素は、flotをした要素の親要素。  
@@ -41,7 +41,7 @@ body {
 display: flex;
 
 詳細はサンプルを見てみよう。  
-[flexサンプル](おさらいflex/index00.html)
+[flexサンプル](docs/おさらいflex/index00.html)
 
 flexの特徴  
  - 指定しなけらば、一番高い領域のコンテンツの高さに合わせる  

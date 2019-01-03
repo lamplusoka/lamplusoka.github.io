@@ -1,0 +1,35 @@
+/* グループ確認用 */
+div {
+  border: solid;
+  margin: 10px;
+}
+
+/* オリジナルCSS */
+body {
+  min-width: 1126px;
+}
+.box {
+  background-color: #fcc;
+}
+.inner {
+  box-sizing: border-box;
+  width: 1100px;
+  margin: 0 auto;
+}
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+.item {
+  background-color: #fff;
+  width: 250px;
+  border: solid;
+  margin: 10px;
+}
+.item a {
+  display: block;
+}
+.item .photo img {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,214 @@
+.container {
+  border: solid 3px #f00;
+  background-color: #fcc;
+  width: 600px;
+  margin: 10px;
+  padding: 10px;
+}
+.item {
+  border: solid 3px #07c;
+  background-color: #BDE;
+  margin: 10px;
+  padding: 10px;
+}
+/* =====================
+  test1:Flex基本形 重要度：★★★
+===================== */
+.test1 {
+  display: flex;
+}
+
+/* =====================
+  test2:折り返し設定 重要度：★★★
+  親要素指定プロパティ:flex-wrap
+  nowrap（初期値）:子要素を折り返さない
+  wrap:子要素を上から下に折り返す
+  wrap-reverse:子要素を下から上に折り返す
+===================== */
+.test2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* =====================
+  test3:横並び設定 重要度：★
+  親要素指定プロパティ:flex-direction
+  row（初期値）:子要素を左から右へ表示
+  row-reverse:子要素を右から左へ表示
+  column:子要素を上から下へ表示
+  column-reverse:子要素を下から上へ表示
+===================== */
+.test3-1 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.test3-2 {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* =====================
+  test4:flex-directionとflex-wrapをまとめて指定 重要度：★
+  親要素指定プロパティ:flex-flow
+  row nowrap（初期値）:子要素を左から右へ表示/折り返さない
+===================== */
+.test4-1 {
+  display: flex;
+  flex-flow: row-reverse wrap;
+}
+.test4-2 {
+  display: flex;
+  flex-flow: column-reverse wrap;
+}
+
+/* =====================
+  test5:横方向位置揃え 重要度：★★★
+  親要素指定プロパティ:justify-content
+  flex-start（初期値）:左揃え
+  flex-end:右揃え
+  center:横方向中央揃え
+  space-between:等間隔揃え（左右余白なし）
+  space-around:等間隔揃え（左右余白あり）
+===================== */
+.test5-1 {
+  display: flex;
+  justify-content: center;
+}
+.test5-2 {
+  display: flex;
+  justify-content: space-between;
+}
+.test5-3 {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* =====================
+  test6:縦方向位置揃え 重要度：★★
+  親要素指定プロパティ:align-items
+  stretch（初期値）:一番高さのあるコンテンツに合わせる
+  flex-start:上揃え
+  flex-end:下揃え
+  center:縦方向中央揃え
+  baseline:ベースライン揃え
+===================== */
+.test6-1 {
+  display: flex;
+}
+.test6-2 {
+  display: flex;
+  align-items: flex-start;
+}
+.test6-3 {
+  display: flex;
+  align-items: flex-end;
+}
+.test6-4 {
+  display: flex;
+  align-items: center;
+}
+.test6-5 {
+  display: flex;
+  align-items: baseline;
+}
+
+/* =====================
+  test7:縦方向位置揃え（複数行） 重要度：★★
+  親要素指定プロパティ:align-content
+  ※flex-wrap:nowrap;指定時は複数行にならないため無効
+  stretch（初期値）:一番高さのあるコンテンツに合わせる
+  flex-start:上揃え
+  flex-end:下揃え
+  center:縦方向中央揃え
+  space-between:等間隔揃え（上下余白なし）
+  space-around:等間隔揃え（上下余白あり）
+===================== */
+.test7-1 {
+  display: flex;
+  flex-wrap:wrap;
+  height: 300px;
+}
+.test7-2 {
+  display: flex;
+  flex-wrap:wrap;
+  height: 300px;
+  align-content: flex-start;
+}
+.test7-3 {
+  display: flex;
+  flex-wrap:wrap;
+  height: 300px;
+  align-content: flex-end;
+}
+.test7-4 {
+  display: flex;
+  flex-wrap:wrap;
+  height: 300px;
+  align-content: center;
+}
+.test7-5 {
+  display: flex;
+  flex-wrap:wrap;
+  height: 300px;
+  align-content: space-between;
+}
+.test7-6 {
+  display: flex;
+  flex-wrap:wrap;
+  height: 300px;
+  align-content: space-around;
+}
+
+/* =====================
+  test8:表示順の指定（数値の小さい順に表示） 重要度：★★★
+  子要素指定プロパティ:order
+  ※親要素に「display:flex;」が指定されていないと有効にならない
+  0（初期値）
+  数値で指定（マイナス値も含む）
+===================== */
+.test8 {
+  display: flex;
+}
+.test8 .item1 {order: 3;}
+.test8 .item2 {order: 2;}
+.test8 .item3 {order: 1;}
+.test8 .item4 {}
+.test8 .item5 {order: 3;}
+.test8 .item6 {order: -1;}
+
+/* =====================
+  test9:親要素の幅が広い場合の余白の比率を指定 重要度：★
+  子要素指定プロパティ:flex-grow
+  ※親要素に「display:flex;」が指定されていないと有効にならない
+  0（初期値）
+  数値で指定（マイナス値無効）
+===================== */
+.test9 {
+  display: flex;
+  width: auto;
+}
+.test9 .item1 {flex-grow: 1;}
+.test9 .item2 {flex-grow: 2;}
+.test9 .item3 {flex-grow: 3;}
+.test9 .item4 {}
+
+/* =====================
+  test10:親要素の幅が狭い場合の縮む比率を指定 重要度：★
+  子要素指定プロパティ:flex-shrink
+  ※親要素に「display:flex;」が指定されていないと有効にならない
+  1（初期値）
+  ※0を指定すると縮まなくなる
+  数値で指定（マイナス値無効）数値が大きいほど狭い幅に縮む
+===================== */
+.test10 {
+  display: flex;
+  width: auto;
+}
+.test10 .item {
+  width: 200px;
+}
+.test10 .item1 {flex-shrink: 1;}
+.test10 .item2 {flex-shrink: 2;}
+.test10 .item3 {flex-shrink: 3;}
+.test10 .item4 {flex-shrink: 0;}
+

@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* グループ確認用 */
+div {
+  border: solid 1px #000;
+  margin: 10px;
+}
+
+/* オリジナルCSS */
+body {
+  background-color: #ccc;
+  margin: 0;
+	min-width: 1000px;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+  height: 0;
+}
+
+.inner{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+.box1 {
+	background-color: pink;
+}
+
+
+.main {
+  float: left;
+  width: 650px;
+}
+
+
+.sub {
+  float: right;
+  width: 230px;
+}
+
+.box2 {
+	background-color: yellow;
+}
+
+.box2 .main {
+  float: right;
+
+}
+
+
+.box2 .sub {
+  float: left;
+
+}
+
+.box3 {
+	background-color: #764cde;
+}
+
+}
+
+

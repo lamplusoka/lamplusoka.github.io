@@ -1,9 +1,5 @@
 # 2018.12.19 授業内容
 
-
-
-
-
 ## 昨日の復習と続き  
   
   
@@ -133,17 +129,13 @@ displayプロパティはあくまでも表示方法の定義であり、要素�
 |inline| インライン要素として表示（横並び）|
 |none| 非表示（印刷用CSSなどでメニューを非表示にしたりする）|
 
-ほかにもある。
+ほかにもある。  
 
 
-<<<<<<< HEAD
 listでリンクを作る際は、li要素内のa要素を使うこと。li要素を指定すると文字外の領域がリンクにならない。  
-=======
-listでリンクを作る際は、li内のa要素を使うこと。liを指定すると文字外の領域がリンクにならない。  
->>>>>>> e4cc1fcf781e6de0956babed7d11b68c05e33850
 
 サルワカのページで見出しの例がある。今なら読み解ける。  
-[サルワカ](https://saruwakakun.com/html-css/reference/h-design)
+[サルワカ](https://saruwakakun.com/html-css/reference/h-design)  
 
 
 <a href="#">topへ</a>  

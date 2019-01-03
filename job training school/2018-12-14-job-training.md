@@ -59,16 +59,18 @@ background-attachment: fixed; 定義しない、もしくは何も値を入れ�
 
 背景のスタイルを一括定義する  
 スペース区切りで一括してい可能  
+```css
 body {  
-/*  
-background-color: #ccc;  
-background-image: url(img/boxbg.gif);  
-background-repeat: no-repeat;  
-background-position: center top;  
-background-attachment: fixed;  
-*/  
-background: #ccc url(img/boxbg.gif) no-repeat center top fixed;  
-}  
+    /*  
+    background-color: #ccc;  
+    background-image: url(img/boxbg.gif);  
+    background-repeat: no-repeat;  
+    background-position: center top;  
+    background-attachment: fixed;  
+    */  
+    background: #ccc url(img/boxbg.gif) no-repeat center top fixed;  
+}
+```
 
 - 位置は順不同
 - ポジションの値はセットで定義すること
@@ -90,7 +92,7 @@ background-size
 CSS3より導入で新しめ。TeraPadで大文字にならない。こういった場合、    
 新しいCSSのプロパティがどのブラウザで使用できるか確認できるサイトで確認。    
   
-background-sizeを一括に追加する場合は、ポジションの後ろにbackground-size  
+background-sizeを一括に追加する場合は、ポジションの後ろに/background-sizeを記述する。  
 ```css
 body{  
     background: #ccc url(img/boxbg.gif) no-repeat center top/20px 20px fixed;  
@@ -153,7 +155,7 @@ padding: 20px 30px 40px;
 
 |値 |内容  |
 |---|---|
-|数値l|	単位つきの数値（負の値は定義できない）|
+|数値|	単位つきの数値（負の値は定義できない）|
 
 1～4つの値指定可能（半角スペースで区切る）   
 ※「0」の時は単位を省略して記述可能 ボックスの値の指定方法  

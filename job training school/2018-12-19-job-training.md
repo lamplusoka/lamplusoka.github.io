@@ -69,7 +69,7 @@ floatプロパティは対象要素を浮かせるプロパティ。
 浮いていない要素からは認識されなくなる。（だから加算）  
 浮かせた後に続く要素が空いたスペースに回り込む。（前の要素は回り込まない）  
 
-![float](img/float.jpg)  
+![float](img/float.jpg){:target="_blank"}  
 
 ### 回り込みの解除
 clear: both;  
@@ -135,7 +135,7 @@ displayプロパティはあくまでも表示方法の定義であり、要素�
 listでリンクを作る際は、li要素内のa要素を使うこと。li要素を指定すると文字外の領域がリンクにならない。  
 
 サルワカのページで見出しの例がある。今なら読み解ける。  
-[サルワカ](https://saruwakakun.com/html-css/reference/h-design)  
+[サルワカ](https://saruwakakun.com/html-css/reference/h-design){:target="_blank"}  
 
 
 <a href="#">topへ</a>  

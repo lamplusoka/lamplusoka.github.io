@@ -29,7 +29,7 @@
 ＜サンプル＞
 移動元
 ```html
-<dl>
+<dl\
  <dt>移動元</dt>
   <dd><p>｜ <a href="#inutic">inutic records</a> ｜ nanicah ｜ KPUS ｜</p></dd>
 ↓  
@@ -104,7 +104,7 @@ Windowsは拡張子大文字小文字は判別しない。デジカメで撮っ�
 最初から、拡張子は小文字でそろえるなどのルール決めをしておくこと。  
 
 ### 画像にリンクを定義
-`<`a href="リンク先URL">`
+`<a href="リンク先URL">`
 `<img src="ファイルパス" alt="代替文字"></a>`
 imgタグをaタグで囲むのみ。  
 

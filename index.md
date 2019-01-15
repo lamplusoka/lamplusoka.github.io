@@ -22,4 +22,4 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 - [2018年12月26日 Photoshop_Web用の環境設定, 操作方法_1](/job training school/2018-12-26-job-training)
 - [2018年12月27日 Photoshop_操作方法_2](/job training school/2018-12-27-job-training)
 - [2018年01月07日 Photoshop_操作方法_3](/job training school/2019-01-07-job-training)
-
+- [2018年01月08日 - 15日 グループワークでのサイト制作](/job training school/2019-01-08-15-job-training)

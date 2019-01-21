@@ -25,3 +25,4 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 - [2018年01月08日 - 15日 グループワークでのサイト制作](/job training school/2019-01-08-15-job-training)
 - [2018年01月17日 - JavaScript_1](/job training school/2019-01-17-job-training)
 - [2018年01月18日 - JavaScript_2](/job training school/2019-01-18-job-training)
+- [2018年01月21日 - JavaScript_3](/job training school/2019-01-21-job-training)

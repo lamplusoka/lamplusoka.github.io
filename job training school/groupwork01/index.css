@@ -1,0 +1,83 @@
+.content {
+  width: 1000px;
+  margin: 0 auto 10px;
+}
+
+.hero {
+
+}
+.description{
+  width: 1000px;
+  margin: 0 auto;
+}
+.description h2 {
+  border-left: 7px solid #057692;
+  padding-left: 10px;
+}
+.desc_margin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.desc1 {
+  display: flex;
+}
+
+.desc_clinic {
+/*  border: solid 2px;*/
+  width: 750px;
+  /*margin: 10px 60px 10px;*/
+}
+.desc_logo {
+  padding-top: 10px;
+}
+.desc2 {
+  display: flex;
+}
+.desc_img_usuge {
+  margin-left: 65px;
+  padding-top: 90px;
+}
+
+.img_bfaf p {
+    text-align: center;
+}
+
+.info_bg {
+  background: #057692;
+  margin-bottom: 80px;
+}
+.info_bord {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.info_title {
+  width: 200px;
+  padding-top: 10px;
+}
+.info_title h4 {
+  color: #ffffff;
+  text-align: center;
+
+}
+.info_daily {
+  width: 800px;
+}
+/*
+.info_daily p {
+  color: #ffffff;
+  line-height: 50%;
+  text-decoration: none;
+}:*/
+.info_daily a {
+  color: #ffffff;
+  line-height: 50%;
+  text-decoration: none;
+}
+
+.info_daily p:hover {
+  text-decoration : underline;
+}
+

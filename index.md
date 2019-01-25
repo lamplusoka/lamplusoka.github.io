@@ -29,4 +29,5 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 - [2018年01月22日 - JavaScript_4](/job training school/2019-01-22-job-training)
 - [2018年01月23日 - JavaScript_5](/job training school/2019-01-23-job-training)
 - [2018年01月24日 - JavaScript_6](/job training school/2019-01-24-job-training)
+- [2018年01月25日 - JavaScript_7](/job training school/2019-01-25-job-training)
 

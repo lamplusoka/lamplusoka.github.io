@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <title>H+AGAクリニック | 医療法人社団ウェルエイジング</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index.css">   
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     </head>
     <body>
     <div class="wrapper">
@@ -29,7 +31,9 @@
         </div><!-- #header -->
         <div class="content">
             <div class="hero">
-                <img src="img/hero_1.jpg" alt="hero2">
+                <div><img src="img/hero_1.jpg" alt="院内イメージ"></div>
+                <div><img src="img/hero_2.jpg" alt="男性イメージ"></div>
+                <div><img src="img/hero_3.jpg" alt="看護師イメージ"></div>
             </div><!-- .hero -->
             <div class="description">
                 <div class="desc1 desc_margin">
@@ -94,5 +98,20 @@
         </div><!-- .footerwrap-->
         </div><!-- .footer -->
     </div><!-- .wrapper -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+    $(function(){
+        $('.hero').slick({
+            slidesToShow:1,
+            slidesToScroll:1,
+            autoplay:true,
+            autoplaySpeed:4000,
+            fade: true,
+            dots: true,
+        });
+
+    });
+    </script>
     </body>
 </html>

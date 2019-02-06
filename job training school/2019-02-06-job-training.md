@@ -82,8 +82,8 @@ echo $bl ? 'セッションを開始しました' : 'セッションを開始で
 ※「-1」もtrueに変換される
 
 
-セッション関連の解説コメント入りphpファイル
-[セッション](docs/session/top.php)  
+セッション関連の解説コメント入りphpファイル  
+[セッション](docs/session/top.php)    
 
 
 ### ファイルを読み込む
@@ -144,6 +144,7 @@ require 'footer.html';
 ?>
 </body>
 </html>
+```
 
 
 

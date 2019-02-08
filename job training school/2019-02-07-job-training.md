@@ -101,8 +101,8 @@ if(isset($_POST['text'])){
 ```
 
 ##### HTMLで意味をもつ記号をエスケープする
-`htmlspecialchars(実体参照に置き換えてほしい文字列,intオプション,)`
-`echo htmlspecialchars($_POST['text']);`
+`htmlspecialchars(実体参照に置き換えてほしい文字列,intオプション,)`  
+`echo htmlspecialchars($_POST['text']);`  
 こうやってきれにすることを**サニタイジング**という
 - サニタイジングのタイミング
 	- 出力する直前でサニタイジングすること
@@ -111,8 +111,7 @@ if(isset($_POST['text'])){
 
 
 ##### 変数出力位置の注意
-以下のような場所に変数の内容を出力するとhtmlspecialchars()関数でのエスケープ処理が意味を持ちません。  
-このような記述はやめましょう。  
+以下のような場所に変数の内容を出力するとhtmlspecialchars()関数でのエスケープ処理が意味を持ちません。このような記述はやめましょう。  
 
 1. href属性値部分への変数出力
 	- 例）`<a href="<?php echo $link; ?>">`

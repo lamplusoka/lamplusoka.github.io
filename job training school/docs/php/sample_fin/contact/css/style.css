@@ -1,0 +1,124 @@
+/* ---- reset CSS ---- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,img { 
+	border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol,ul {
+	list-style:none;
+}
+caption,th {
+	text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,q:after {
+	content:'';
+}
+abbr,acronym { border:0;
+}
+/* ---- reset CSS end ---- */
+
+/* --clearfix -- */
+.clearfix:after{
+	content: '';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {zoom:1;}
+/* -- clearfix end --*/
+
+/* ---- Original ---- */
+body{
+  background: #F0F0F0;
+}
+#box{
+  width: 500px;
+  margin: 0 auto;
+  border: solid 1px #333;
+  background: #fff;
+}
+#header{
+  border-bottom: dashed 1px #CCC;
+  margin: 0 auto;
+  padding: 10px;
+}
+#main{
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+#header h1{
+  font-size:150%;
+  font-weight: 700;
+  line-height: 50px;
+  height: 50px;
+}
+#main dl{
+  padding-bottom: 20px;
+}
+#main dl dt{
+  font-weight: 700;
+  padding: 10px;
+}
+#main dl dd{
+  padding: 0 10px 10px;
+  margin-left: 20px;
+}
+#box p.copy{
+  border-top: dashed 1px #CCC;
+  text-align: center;
+  font-size: 80%;
+  color: #333;
+  padding: 10px;
+}
+#main p.btn{
+  text-align: center;
+}
+#main p input{
+  background: #F55;
+  width: 170px;
+  height: 41px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #fff;
+}
+#main p input:hover{
+  background: #F22;
+}
+#main ul.error{
+  border: solid 1px #c00;
+  padding: 5px 10px;
+  width: 70%;
+  margin: 0 auto 20px;
+}
+#main ul.error li{
+  list-style: none outside;
+  font-size: 12px;
+  color: #f00;
+  padding: 5px 0;
+}
+#main div{
+  text-align :center;
+}
+#main div form, #main div form p, #main div form p input{
+  display : inline;
+}
+* html #main div form p input, *:first-child+html #main div form p input{
+  display : inline-block;
+}

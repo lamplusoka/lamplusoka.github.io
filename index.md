@@ -7,6 +7,11 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 授業内容まとめを記載。
 
 どんどんページの内容が充実していくことでしょう、、、
+<FORM method=GET action="http://www.google.co.jp/search"><INPUT type="hidden" name="ie" value="Shift_JIS"> <INPUT type="hidden" name="oe" value="Shift_JIS">　<INPUT type="hidden" name="domains" value="http://www.lamplus.ml/">
+<INPUT type="text" size="25" maxlength="150" name="q"><INPUT type="submit" name="btnG" value="ページ内検索">
+<BR>
+<INPUT type="hidden" checked name="sitesearch" value="http://www.hpcreating.com"><BR>
+</FORM>
 
 - [2018年12月10日 HTML_1](/job training school/2018-12-10-job-training)
 - [2018年12月11日 HTML_2](/job training school/2018-12-11-job-training)

@@ -37,5 +37,6 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 - [2018年02月05日 - PHP_5](/job training school/2019-02-05-job-training)
 - [2018年02月06日 - PHP_6](/job training school/2019-02-06-job-training)
 - [2018年02月07日 - PHP_7](/job training school/2019-02-07-job-training)
+- [2018年02月08日 - PHP_8](/job training school/2019-02-08-job-training)
 
 

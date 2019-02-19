@@ -43,6 +43,7 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 - [2019年02月14日 - 面接対策](/job training school/2019-02-14-job-training)
 - [2019年02月15日 - MariaDB+PHP_1](/job training school/2019-02-15-job-training)
 - [2019年02月18日 - MariaDB+PHP_2](/job training school/2019-02-18-job-training)
+- [2019年02月19日 - MariaDB+PHP_3 + グループワーク](/job training school/2019-02-18-job-training)
 
 
 

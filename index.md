@@ -48,7 +48,8 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 - [2019年03月04日 - 企業実習_Java2](/job training school/2019-03-04-job-training)
 - [2019年03月05日 - 企業実習_Java3](/job training school/2019-03-05-job-training)
 - [2019年03月06日 - 企業実習_Java4](/job training school/2019-03-06-job-training)
-- [2019年03月07日 - 企業実習_Java4](/job training school/2019-03-07-job-training)
+- [2019年03月07日 - 企業実習_Java5](/job training school/2019-03-07-job-training)
+- [2019年03月08日 - 企業実習_Java6](/job training school/2019-03-08-job-training)
 
 
 

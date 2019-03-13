@@ -11,7 +11,7 @@
 	- 文字列の比較はString.equalsを使う必要がある
 - ただStirngで==と!=は文字列がnullかどうか調べる場合だけに使える
 - $$ - かつ
-- || - または
+- &#124;&#124; - または
 - ! - ～でない
 
 ```java
@@ -61,26 +61,6 @@ public class Sample07_確認 {
 while((n=Input.getInt()) !=0){
 	// 繰り返し実行処理
 
-}
-
-package sample;
-import lib.Input;
-public class Sample09_02 {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
-		int number;
-		while((number=Input.getInt())!=0){
-		System.out.println(number + " を入力");
-
-		}
-		System.out.println("プログラム終了");
-	}
-
-}
 package sample;
 import lib.Input;
 public class Sample09_02 {
@@ -115,7 +95,7 @@ public class Sample09_03 {
 	}
 
 }
-
+```
 
 ##### 変数はどこでも使える
 - 例) 3と0じゃなければ入力値をループ出力

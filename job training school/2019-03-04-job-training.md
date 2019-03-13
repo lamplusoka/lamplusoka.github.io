@@ -258,6 +258,7 @@ for(int n : number){
 ```
 
 ```java
+
 		String[] str = {"abc", "def", "ghi"};
 		String ss = "";
 		for(int i = 0; i<str.length; i++){
@@ -276,4 +277,4 @@ for(int n : number){
 	}
 
 }
-
+```

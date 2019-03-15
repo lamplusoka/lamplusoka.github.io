@@ -15,7 +15,7 @@ public class Exec {
 	 */
 	public static void main(String[] args) {
 	
-	int[][] nums = {{1, 2, 3}, {10, 20, 30}, {100, 200, 300}};//二次元配列でだから！
+	int[][] nums = {1, 2, 3, 10, 20, 30, 100, 200, 300};	//{{}}ほんとは二次元配列だから！
 
 		for(int i = 0; i < nums.length; i++){
 			for(int j = 0; j < nums[i].length; j++){

@@ -14,7 +14,8 @@ public class Exec {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[][] nums = {1, 2, 3}, {10, 20, 30}, {100, 200, 300};//ほんとは二次元配列で{{だから！
+	
+		int[][] nums = {{1, 2, 3}, {10, 20, 30}, {100, 200, 300}};//ほんとは二次元配列で{{だから！
 
 		for(int i = 0; i < nums.length; i++){
 			for(int j = 0; j < nums[i].length; j++){

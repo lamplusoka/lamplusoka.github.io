@@ -16,7 +16,6 @@
 ### SSHによるリモートアクセス
 - Macはターミナルを使える。Windowsはツールをインストールする。
     - Teraterm [https://dev.classmethod.jp/cloud/aws/aws-beginner-ec2-ssh/](https://dev.classmethod.jp/cloud/aws/aws-beginner-ec2-ssh/)
-    - AWS
     - Windows10 1709より「OpenSSH Client (Beta)」機能を有効にすることにより使える
         - [https://news.mynavi.jp/article/20171218-win10_openssh/](https://news.mynavi.jp/article/20171218-win10_openssh/)
         - もしくはWindows Subsystem for Linux(WSL)を使う
@@ -36,24 +35,23 @@
             - それ以外の場合で、ec2-user および root が機能しない場合は、AMI プロバイダーに確認してください。
 
 ### KUSANAGIの設定値
-+---[RSA 2048]----+
-|        ..+=*=*+B|
-|       o ..*=X + |
-|      . + +.Boo =|
-|       = . = .o.+|
-|        S + = E+ |
-|       . + + . .+|
-|        . .     +|
-|         .     . |
-|                 |
-+----[SHA256]-----+
++---[RSA 2048]----+  
+|        ..+=*=*+B|  
+|       o ..*=X + |  
+|      . + +.Boo =|  
+|       = . = .o.+|  
+|        S + = E+ |  
+|       . + + . .+|  
+|        . .     +|  
+|         .     . |  
+|                 |  
++----[SHA256]-----+  
 
-WordPressのDNS名：パブリックIP(DNSを取得していない状態でDNS名を指定すると
-WordPressの設定に失敗する)[https://ygkb.jp/2321#toc21](https://ygkb.jp/2321#toc21)
-DB名：kusanagi
-DBのアクセスユーザー名：dbuser_kusanagi
-DBユーザーのパスワード：kusanagi
-
-WordPressのユーザー：kusanagiwp
-パスワード：kusanagiwp1!?0905
+- WordPressのDNS名：パブリックIP(DNSを取得していない状態でDNS名を指定すると
+- WordPressの設定に失敗する)[https://ygkb.jp/2321#toc21](https://ygkb.jp/2321#toc21- )
+- DB名：kusanagi
+- DBのアクセスユーザー名：dbuser_kusanagi
+- DBユーザーのパスワード：kusanagi
+- WordPressのユーザー：kusanagiwp
+- パスワード：kusanagiwp1!?0905
 

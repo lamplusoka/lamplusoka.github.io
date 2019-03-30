@@ -4,7 +4,6 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 ---
 
 2018年12月3日より、職業訓練校に入校しWebプログラミングを受講。授業内容まとめを記載。
-どんどんページの内容が充実していくことでしょう、、、  
 
 - [2018年12月10日 HTML_1](/job training school/2018-12-10-job-training)
 - [2018年12月11日 HTML_2](/job training school/2018-12-11-job-training)
@@ -57,3 +56,6 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 - [2019年03月14日 - 企業実習_Java10](/job training school/2019-03-14-job-training)
 - [2019年03月15日 - 企業実習_Java11](/job training school/2019-03-15-job-training)
 - [2019年03月19日 - 企業実習_メールシステムコンバージョン](/job training school/2019-03-13-phpでのメール送信)
+
+2019年4月1日よりIT企業に就職。そこからの技術メモを備忘録として
+- [2019年03月19日 - 企業実習_メールシステムコンバージョン](/on the job/2019-03-30-AWS-to-CentOS)

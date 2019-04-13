@@ -31,3 +31,32 @@
         - **AWSの各サービスはグローバル、リージョン、AZのどれかに属する**
             - さらに外側にはクラウドフロントというサービスがある
 
+## AWSが提供する基本サービス
+- EC2
+    - AZのサービス
+    - サーバーの追加・削除、マシンスペック変更も数分で可能
+    - 管理者権限(root / Administrator) で利用可能
+    - EC2のシステム基盤 (AWS Nitro System)
+        - 独自のハードウェア/Hypervisorにより最適化された性能を提供
+    - EC2で選択できるプロセッサとアーキテクチャ
+        - Intel Xeon processor
+        - AMD EPYC processor
+            -  10% コスト低減
+        - AWS Graviton Processor
+            -  最大 45% コスト低減
+    - APIでインフラの自動化が可能
+
+```bash
+$ aws ec2 run-instances ¥
+--image-id ami-zzzzzz ¥
+--instance-count 3 ¥
+--region ap-northeast-1 ¥
+--instance-type m5.2xlarge
+```
+
+- S3
+- EBS
+- RDS
+- ElastCache
+- DynamoDB
+

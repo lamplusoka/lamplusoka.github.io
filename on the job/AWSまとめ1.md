@@ -33,19 +33,19 @@
 
 ## AWSが提供する基本サービス
 - EC2
-    - AZのサービス
-    - サーバーの追加・削除、マシンスペック変更も数分で可能
-    - 管理者権限(root / Administrator) で利用可能
-    - LinuxKVMで動いている
-    - EC2のシステム基盤 (AWS Nitro System)
-        - 独自のハードウェア/Hypervisorにより最適化された性能を提供
-    - EC2で選択できるプロセッサとアーキテクチャ
-        - Intel Xeon processor
-        - AMD EPYC processor
-            -  10% コスト低減
-        - AWS Graviton Processor
-            -  最大 45% コスト低減
-    - APIでインフラの自動化が可能
+  - AZのサービス
+  - サーバーの追加・削除、マシンスペック変更も数分で可能
+  - 管理者権限(root / Administrator) で利用可能
+  - LinuxKVMで動いている
+  - EC2のシステム基盤 (AWS Nitro System)
+      - 独自のハードウェア/Hypervisorにより最適化された性能を提供
+  - EC2で選択できるプロセッサとアーキテクチャ
+      - Intel Xeon processor
+      - AMD EPYC processor
+          -  10% コスト低減
+      - AWS Graviton Processor
+          -  最大 45% コスト低減
+  - APIでインフラの自動化が可能
 
 ```bash
 $ aws ec2 run-instances ¥
@@ -54,20 +54,24 @@ $ aws ec2 run-instances ¥
 --region ap-northeast-1 ¥
 --instance-type m5.2xlarge
 ```
-- EC2インスタンスのネーミングポリシー
-  - c5d.xlarge
-    - c : インスタンスファミリー
-      - M5, M5a, T3, A1 : 汎用型
-        - TはCPUのバースト機能がある
-      - C5, C5n : コンピューティング最適化
-      - I3, H1 D2 : ストレージ最適化
-      - X1,R5, Z1d : メモリ最適化
-      - F1, P3, G3 : 高速コンピューティング(GPU・FPGA)
-        - 3Dの処理をしたい時など、HPC(high perfomance PC)はP3を使うなど
-    - 5 : インスタンス世代
-      - 同じインスタンスファミリーでも世代が進むにつれ数字が大きくなる。世代が新しい方が高性能でコストパフォーマンスも高いため、極力最新世代のインスタンス利用が推奨
-    - d : (追加機能)
-    - xlarge : インスタンスサイズ
+  - EC2インスタンスのネーミングポリシー
+    - c5d.xlarge
+      - c : インスタンスファミリー
+        - M5, M5a, T3, A1 : 汎用型
+          - TはCPUのバースト機能がある
+        - C5, C5n : コンピューティング最適化
+        - I3, H1 D2 : ストレージ最適化
+        - X1,R5, Z1d : メモリ最適化
+        - F1, P3, G3 : 高速コンピューティング(GPU・FPGA)
+          - 3Dの処理をしたい時など、HPC(high perfomance PC)はP3を使うなど
+      - 5 : インスタンス世代
+        - 同じインスタンスファミリーでも世代が進むにつれ数字が大きくなる。世代が新しい方が高性能でコストパフォーマンスも高いため、極力最新世代のインスタンス利用が推奨
+      - d : (追加機能)
+      - xlarge : インスタンスサイズ
+  - 少し特殊なインスタンスタイプ
+    - Amazon EC2 Bare Metal
+      - AWSの各種サービスとの連携が可能で、AWSクラウドのメリットを失うことなく、OSが直接下層のハードウェアにアクセス可能
+
 - S3
 - EBS
 - RDS

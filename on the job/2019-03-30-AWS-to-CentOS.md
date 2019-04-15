@@ -33,6 +33,12 @@
             - SUSE AMI の場合は、ユーザー名は ec2-user または root のどちらかです。
             - Ubuntu AMI の場合は、ユーザー名は ubuntu です。
             - それ以外の場合で、ec2-user および root が機能しない場合は、AMI プロバイダーに確認してください。
+            
+### SSH接続ツール Poderosa Terminalで繋ぐときは
+- 「秘密鍵を使用」でAWSのキーを読み込ませる
+    - パスフレーズは不要
+- アカウントに「centos」を入力
+- 接続先にパブリックIPを入力して接続
 
 ### KUSANAGIの設定値
 +---[RSA 2048]----+  

@@ -68,6 +68,9 @@ outline: 日々の勉強内容、調べたことなどを記載していきま�
 - [2019年04月04日 - WordPress まとめ1](/on the job/2019-04-04-WordPress まとめ1)
 - [2019年04月05日 - WordPress まとめ2](/on the job/2019-04-05-WordPress まとめ2)
 - [2019年04月08日 - WordPress まとめ3](/on the job/2019-04-08-WordPress まとめ3)
+- [AWSまとめ1](/on the job/AWSまとめ1)
+- [JMeterまとめ](/on the job/JMeterまとめ)
+- [bashコマンドメモ.md](/on the job/bashコマンドメモ.md)
 
 
 

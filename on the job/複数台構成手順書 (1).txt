@@ -1,0 +1,230 @@
+#IP制限
+113.43.147.210/32　Primeの有線の固定IP
+202.181.103.224/32
+59.106.73.0/24
+
+zabbix
+52.196.34.217/32:10050
+許可する
+
+
+
+#1yumアップデートを行う
+yum --enablerepo=remi,remi-php56 update -y
+
+##再起動
+reboot
+
+#2再起動後MSPの初期セットアップ(rootで行う）
+
+##kusanagi initを実行
+kusanagi init
+
+##git管理する
+cd /etc/
+git init
+sudo git add -A
+sudo git config --global user.name 'psuser'
+sudo git config --global user.email 'support@prime-strategy.co.jp'
+sudo git commit -m 'first commit'
+
+##swap設定
+cd /
+mkdir swap
+dd if=/dev/zero of=/swap/swap0 bs=512M count=1
+chmod 600 /swap/swap0
+mkswap /swap/swap0 1
+swapon /swap/swap0
+free -m
+
+##swapの永続化
+・fstabに追加
+# vi /etc/fstab
+/swap/swap0     swap    swap    defaults        0 0
+
+##zabbixの仕込み
+sed -i "s/^Server=127.0.0.1/Server=52.196.34.217/g" /etc/zabbix/zabbix_agentd.conf
+sed -i "s/^ServerActive=127.0.0.1/ServerActive=52.196.34.217/g" /etc/zabbix/zabbix_agentd.conf
+sed -i "s/^Hostname=Zabbix server/# Hostname=Zabbix server/g" /etc/zabbix/zabbix_agentd.conf
+sed -i "s/^# HostnameItem=system.hostname/HostnameItem=system.hostname/g" /etc/zabbix/zabbix_agentd.conf
+
+zabbix起動
+systemctl status zabbix-agent
+systemctl enable zabbix-agent
+systemctl start zabbix-agent
+systemctl status zabbix-agent
+
+10050が空いていることを確認
+netstat -ln | grep 10050
+
+---
+ここからギャレラの設定
+
+------
+
+
+#3Lsyncの設定
+Web1で鍵をつくる
+$ sudo ssh-keygen -t rsa -b 4096
+$ sudo cat /root/.ssh/id_rsa.pub
+
+全台で実施
+$ sudo mkdir -p /root/.ssh/  
+$ sudo chmod 700  /root/.ssh/
+$ sudo chmod 400  /root/.ssh/id_rsa
+authorized_keysにid_rsa.pubをコピー
+
+$ sudo sed -i "s/^#PermitRootLogin yes/PermitRootLogin yes/g" /etc/ssh/sshd_config
+$ sudo sed -i "s/^PermitRootLogin no/PermitRootLogin yes/g" /etc/ssh/sshd_config
+$ sudo sed -i "s/^#RSAAuthentication yes/RSAAuthentication yes/g" /etc/ssh/sshd_config
+$ sudo sed -i "s/^#PubkeyAuthentication yes/PubkeyAuthentication yes/g" /etc/ssh/sshd_config
+$ sudo sed -i "s/^#PermitEmptyPasswords no/PermitEmptyPasswords no/g" /etc/ssh/sshd_config
+$ sudo systemctl restart sshd
+
+
+
+
+サーバー間の接続を確認する。
+ssh -i /root/.ssh/id_rsa root@10.0.0.10
+
+設定をかく
+#vi /etc/lsyncd.conf 
+--General Settings
+settings {
+    logfile = "/var/log/lsyncd/lsyncd.log",
+    statusFile = "/var/log/lsyncd/lsyncd.stat",
+    maxProcesses = 2,
+    statusInterval = 1,
+    insist = 1,
+}
+--Settings for Web1
+sync {
+    default.rsync,
+    source = "/home/kusanagi/xxxx/DocumentRoot/",
+    target = "10.0.0.5:/home/kusanagi/xxxx/DocumentRoot/",
+    delete = "running",
+    init = false,
+    exclude = {"*.swp","/log/"},
+    rsync = {
+        archive = true,
+        compress = false,
+    }
+}
+--Settings for Web2
+sync {
+    default.rsync,
+    source = "/home/kusanagi/xxxx/DocumentRoot/",
+    target = "10.0.0.6:/home/kusanagi/xxxx/DocumentRoot/",
+    delete = "running",
+    init = false,
+    exclude = {"*.swp","/log/"},
+    rsync = {
+        archive = true,
+        compress = false,
+    }
+}
+systemctl start lsyncd
+systemctl enable lsyncd
+
+##Lsyncd設定必須!
+・Lsyncd監視ファイル上限を引き上げる
+・数を見積もる
+find /home/kusanagi/XXXXXX/DocumentRoot/ -type f | wc -l
+→およその数がでる。
+3年間運用で問題ない数値を割り出す（1.5倍くらい。）
+
+ファイル数を設定する
+vi /etc/sysctl.conf
+fs.inotify.max_user_watches = 12288(割り出した数）
+
+rebootする。
+上限が引きあがっているか確認する
+cat /proc/sys/fs/inotify/max_user_watches
+
+#4クラスタリングの設定
+Web01、Web02、Web03で一台ずつ実施する
+
+mysqlデータベース以外のデータベースが削除されていること
+
+rootでmysqlにログインして
+mariaDB> show databases;
+
+
+以下のような状況があればおｋ 
++--------------------+ | Database | +--------------------+
+ | information_schema |
+ | mysql | 
+| performance_schema | +--------------------+ 3 
+
+
+/etc/my.cnf.d/server.cnfに以下の設定を追加する。
+
+[galera]
+wsrep_provider=/usr/lib64/galera/libgalera_smm.so
+wsrep_cluster_address="gcomm://10.0.0.4, 10.0.0.5"
+binlog_format=row
+default_storage_engine=InnoDB
+innodb_autoinc_lock_mode=2
+innodb_flush_log_at_trx_commit=0
+bind-address=0.0.0.0
+wsrep_cluster_name="KUSANAGI_DB_Cluster"
+wsrep_node_address="10.0.0.6"
+wsrep_sst_method=rsync
+wsrep_retry_autocommit=3
+wsrep-sync-wait=0
+wsrep_slave_threads=2
+
+wsrep_on=ON
+
+
+
+mysqlを停止させる
+$ sudo systemctl stop mysql
+$ sudo systemctl disable mysql
+$ sudo chkconfig mysql off
+
+Web01（もしくは初回）起動
+sudo service mysql start --wsrep_cluster_address=gcomm://
+
+10.1系の場合
+galera_new_cluster
+
+それ以降
+sudo service mysql start
+
+
+create database galeratestでデータベースを作るなどして、クラスタリングされているか確認
+SHOW GLOBAL STATUS LIKE 'wsrep_%';で確認
+
+確認が終わったら、自動起動させる
+sudo chkconfig mysql on
+
+
+
+
+
+
+
+
+cd /etc/
+git init
+sudo git add -A
+sudo git config --global user.name 'psuser'
+sudo git config --global user.email 'support@prime-strategy.co.jp'
+sudo git commit -m 'first commit'
+cd /
+mkdir swap
+dd if=/dev/zero of=/swap/swap0 bs=512M count=1
+chmod 600 /swap/swap0
+mkswap /swap/swap0 1
+swapon /swap/swap0
+free -m
+sed -i "s/^Server=127.0.0.1/Server=52.196.34.217/g" /etc/zabbix/zabbix_agentd.conf
+sed -i "s/^ServerActive=127.0.0.1/ServerActive=52.196.34.217/g" /etc/zabbix/zabbix_agentd.conf
+sed -i "s/^Hostname=Zabbix server/# Hostname=Zabbix server/g" /etc/zabbix/zabbix_agentd.conf
+sed -i "s/^# HostnameItem=system.hostname/HostnameItem=system.hostname/g" /etc/zabbix/zabbix_agentd.conf
+systemctl status zabbix-agent
+systemctl enable zabbix-agent
+systemctl start zabbix-agent
+systemctl status zabbix-agent
+netstat -ln | grep 10050

@@ -98,4 +98,47 @@ wp();
 require_once(ABSPATH . WPINC . '/template-loader.php');
 ```
 
+- ブラウザから`http://example.com/ew.2.2.hello_world.php` にアクセスすると`http://example.com/?p=1` へアクセスした場合と同じ表示が得られる
+- wp 関数は、HTTPリクエストのクエリ文字列を WordPress のクエリに変換し、それをデータベースの SQL クエリに変換して、
+データベースから「Hello world!」ページに必要なデータを取得する
+- ABSPATHとは
+    - WordPressがインストールされているディレクトリのフルパスが代入された定数
+    - wp-config.phpが存在しているディレクトリまでのフルパス
+- WPINC
+    - wp-setting.phpに`define( 'WPINC', 'wp-includes' );`とあり
+    - つまり、ルートパス/wp-includes/
+- ここの解説いいよ
+    - [http://www.warna.info/archives/279/](http://www.warna.info/archives/279/)
+### ここで見えてきたファイルの順番
+##### 上から
+- DocumentRoot直下のindex.php
+    - 'WP_USE_THEMES'定数を定義してtrue入れる
+    - 同階層のwp-blog-header.phpをrequire
+- wp-blog-header.php
+    - wp()はwp-includs/functions.phpの1103行目`function wp( $query_vars = '' )`で定義
+    - [この記事](https://nskw-style.com/2012/wordpress/how-wp-works/reading-query-php-2.html)
+    - ようはこれ
+    1. WordPressルートのindex.phpから、wp-blog-header.phpが呼び出される。
+    2. wp-load.phpという各種初期設定や関数、クラスを読み込むためのファイルが呼び出される。この段階でWordPressの動作に必要な主なクラス、関数、プラグイン、テーマのfunctions.phpの読み込みや、DB接続が完了する。
+    3. wp()関数が実行される。ここでは、WPクラスが使われていてユーザ情報、リクエストURL、引数を基にquery_var, query_stringが作られ色々統合され、それをもとに$postsの中にDBから取得してきた投稿情報が入れられる。
+    4. このあと、wp-includes/template-loader.phpが読み込まれる。この段階では、ウェブサイトを訪れたユーザが誰で、何を見たいと思っているのかが分かっていて、関数も実行できる状態になっているため、必要なテンプレートファイルも判別可能な状態になっている。
+    - 以下はメモ
+        - wp-load.php
+            - 色々やってた
+            - error_reporting
+                - デフォルトはphp.iniで定義
+                    - error_reporting = E_ALL & ~E_NOTICE
+                    - display_errors = On
+                    - [https://maku77.github.io/php/settings/error-level.html](https://maku77.github.io/php/settings/error-level.html)
+                    - [http://php-beginner.com/function/errorfunc/error_reporting.html](http://php-beginner.com/function/errorfunc/error_reporting.html)
+                    - PHP コード内で動的にエラー出力設定を変更するには、error_reporting() 関数でエラーレベルを設定し、ini_set() 関数でエラー表示の有効無効を切り替える  
+                    - `<?php error_reporting(E_ALL | E_STRICT);  ini_set('display_errors', 'On');  `
+            - 関数前の@はエラー制御演算子
+                - これにより関数で発生したエラーについて無視される
+            - 「__()」と「_e()」について
+                    - 国際化対応のためのWordPressのユーザー関数です（PHPの関数ではありません）
+                    - __('英文テキスト', 'ロケール');
+                    - _e('英文テキスト', 'ロケール');
+                    - 第1引数に渡された英文テキストを、第2引数に指定された「ロケール」に応じて翻訳
+                    - [http://ysklog.net/wordpress/1616.html](http://ysklog.net/wordpress/1616.html)
 

@@ -141,4 +141,6 @@ require_once(ABSPATH . WPINC . '/template-loader.php');
                     - _e('英文テキスト', 'ロケール');
                     - 第1引数に渡された英文テキストを、第2引数に指定された「ロケール」に応じて翻訳
                     - [http://ysklog.net/wordpress/1616.html](http://ysklog.net/wordpress/1616.html)
+- wp-blog-header.phpの構造
+    - ブートストラップのロード、wp 関数の実行、テンプレートローダーのロードの3つがWordPressのWeb サイト表示の場合の基本構造になる。それぞれ、WordPressの起動と初期化、WordPressクエリの実行、テーマの適用です。
 

@@ -103,7 +103,6 @@ require_once(ABSPATH . WPINC . '/template-loader.php');
 データベースから「Hello world!」ページに必要なデータを取得する
 - ABSPATHとは
     - WordPressがインストールされているディレクトリのフルパスが代入された定数
-    - wp-config.phpが存在しているディレクトリまでのフルパス
 - WPINC
     - wp-setting.phpに`define( 'WPINC', 'wp-includes' );`とあり
     - つまり、ルートパス/wp-includes/
@@ -144,3 +143,67 @@ require_once(ABSPATH . WPINC . '/template-loader.php');
 - wp-blog-header.phpの構造
     - ブートストラップのロード、wp 関数の実行、テンプレートローダーのロードの3つがWordPressのWeb サイト表示の場合の基本構造になる。それぞれ、WordPressの起動と初期化、WordPressクエリの実行、テーマの適用です。
 
+### 管理画面
+- 'wp-admin/admin.php'を読み込み
+    - admin.phpがブートストラップ
+    - admin.phpの中でルート直下のwp-load.phpを読み込んで色々してる
+- 'wp-admin/admin-header.php'を読み込み
+    - 管理画面左のメインナビゲーションメニューの生成処理を含んでいる
+- コンテンツがあり
+- 'wp-admin/admin-footer.php'の読み込み
+
+### wp-config.php
+- wp-config.php はデータベースの接続情報など一部の重要な基本設定項目を記述する設定ファイル
+- インストール時に WordPress が自動的。書き込み権限が付与されていない場合は手動で設置が必要
+- wp-config.php はブートストラップの wp-load.php から読み込まれる
+    - wp-load.phpを少し解説
+        - ABSPATHを定義：WordPressのインストールディレクトリ
+        - エラーレベルの設定
+        - wp-config.phpファイルをWordPressをインストールしたディレクトリ内で探し、存在しない場合には1つ上の階層のディレクトリを探してロードする
+            - つまり一つ上の階層にwp-config.phpを置いてもよし
+- wp-includes/default-constants.php でデフォルトで定義される定数は、wp-config.phpでオーバーライドして定義することが可能
+
+```php
+<?php
+//default-constants.php
+//(略)
+if ( !defined('SHORTINIT') )
+define('SHORTINIT', false);
+//(略)
+```
+- このように、「もし定義されていなければ」で始まる定数は、すべて wp-config.php で定義が可能
+
+#### プラグイン
+
+- プラグインは 3 つの種類がある
+    - 通常のプラグイン
+        - wp-content/plugins、もしくはさらに個別のプラグイン用のサブディレクトリを作成してその中にプラグイン本体となるPHPファイルやCSS などのリソースを設置
+    - 特殊なプラグイン2つ
+        - マストユーズプラグイン
+            - マストユーズプラグインは管理画面からの有効化を必要とせず、常に有効なプラグインとして取り扱われる特殊なプラグイン
+            - wp-content/mu-pluginsディレクトリを手動で作成し、そのディレクトリ直下に直接PHPファイルを設置することでインストールする
+            - なお、マストユーズプラグインは、標準プラグイン情報ヘッダを必要としない
+        - ドロップイン
+            - [http://sbiz.aynumosir.com/site-construction/wordpress-plugin/drop-in-error](http://sbiz.aynumosir.com/site-construction/wordpress-plugin/drop-in-error)
+    - 通常のプラグインは最小限、プラグインのphpファイル冒頭に`コメントで以下を記述し、wp-content/pliginsに保存すれば認識される
+```php
+<?php
+/**
+* Plugin Name: My Small Plugin
+*/
+```
+- プラグインのアップデート
+    - アップデート対象の判定は、プラグイン名で判定されるため、自分で作成したプラグインであっても公式ディレクトリに登録されているプラグインと同じ名前の場合、誤認識してアップデート対象になる可能性があるので、プラグインを作成する場合はユニークな名前をつける必要がある
+    - マストユーズプラグインやドロップインはそれ単体が自動的にアップデートされることはない
+
+##### プラガブル関数
+- プラグインによってオーバーライドすることのできる WordPress コアの関数
+- すべてのプラグインのロードが完了した後に WordPress によってその関数が未定義の場合に定義される
+    - つまりプラグイン内で先に定義することによって置き換えが可能
+- [プラガブル関数：コーデックス](https://wpdocs.osdn.jp/%E3%83%97%E3%83%A9%E3%82%AC%E3%83%96%E3%83%AB%E9%96%A2%E6%95%B0)
+
+### フック
+- WordPressのコア、テーマ、プラグイン、PHPによる実行または解釈のさまざまな段階における基本的なイベントトリガー
+- フックの種類
+    - フィルター
+    - アクション

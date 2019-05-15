@@ -1,0 +1,48 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: A simple EC2 instance
+Parameters:
+  EC2InstanceType:
+    Type: String
+    Default: t2.small
+  SSHKeyName:
+    Type: String
+    Default: testkey1
+  OSImageId:
+    Type: String
+    Default: ami-045f38c93733dd48d
+Resources:
+  WebServer1:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: !Ref OSImageId
+      InstanceType: !Ref EC2InstanceType
+      KeyName: !Ref SSHKeyName
+      SecurityGroups:
+        - !Ref InstanceSecurityGroup
+      UserData: !Base64
+        'Fn::Join':
+          - ''
+          - - |
+              #!/bin/bash -xe
+            - |
+              yum -y update; curl -O https://centminmod.com/betainstaller73.sh && chmod 0700 betainstaller73.sh && bash betainstaller73.sh > /tmp/betainstalllog
+            - |
+              curl -L https://wordpress.org/latest.zip -o wordpress.zip
+            - |
+              unzip wordpress.zip
+            - |
+              mv wordpress /usr/local/nginx/html
+            - |
+              find /usr/local/nginx/html/ -type d|xargs chmod 755 ;find /usr/local/nginx/html/ -type f|xargs chmod 644;chown -R nginx.nginx /usr/local/nginx/html/wordpress
+            - |
+              rm -fr wordpress.zip
+
+  InstanceSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Enable SSH access via port 22
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 113.43.147.210/32

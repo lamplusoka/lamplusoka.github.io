@@ -142,7 +142,7 @@ public class Exec {
 Member member = new Student(...); // これはOK
 Student stu = member; // コンパイルエラー
 Student stu = (Student)member;	// 元々Studentなので、この流れ、やり方ならOK
-
+```
 
 ##### instanceof演算子
 - instanceof演算子は変数の中にあるオブジェクトの型を調べることができる
